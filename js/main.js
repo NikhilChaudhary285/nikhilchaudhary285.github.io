@@ -1,37 +1,48 @@
 // ================= NAVBAR TOGGLE =================
 const navToggle = document.getElementById("navToggle");
-const navLinks = document.querySelector(".nav-links");
+const navLinks = document.getElementById("navLinks");
 const navbar = document.querySelector(".navbar");
 
-if (navToggle) {
+// Toggle mobile menu
+if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("active");
         navToggle.setAttribute("aria-expanded", isOpen);
     });
 }
 
-// Close mobile menu when resizing to desktop
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 768 && navLinks.classList.contains("active")) {
+// Close menu when clicking a nav link (mobile UX)
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
         navLinks.classList.remove("active");
-        navToggle.setAttribute("aria-expanded", false);
+        navToggle.setAttribute("aria-expanded", "false");
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+    if (
+        !navLinks.contains(e.target) &&
+        !navToggle.contains(e.target)
+    ) {
+        navLinks.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
     }
 });
 
-// Navbar shadow on scroll
-window.addEventListener("scroll", () => {
-    navbar.classList.toggle("scroll-shadow", window.scrollY > 50);
+// Close menu on ESC key
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        navLinks.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+    }
 });
 
-// Smooth scroll + close mobile menu
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", e => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
-        navLinks.classList.remove("active");
-        navToggle.setAttribute("aria-expanded", false);
-    });
+// ================= NAVBAR SCROLL SHADOW =================
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        navbar.classList.add("scroll-shadow");
+    } else {
+        navbar.classList.remove("scroll-shadow");
+    }
 });

@@ -6,8 +6,8 @@
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  background: #0f172a; /* slate-900 */
-  color: #e5e7eb;     /* gray-200 */
+  background: #0f172a;
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
@@ -18,7 +18,7 @@ body {
   width: 100%;
   background: #0f172a;
   z-index: 1000;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25); /* slightly lighter */
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25);
 }
 
 .nav-container {
@@ -27,11 +27,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 20px; /* 🔹 reduced height for desktop UX */
+  margin-top: 10px;
+  padding: 15px 0px; /* UPDATED: slightly slimmer */
 }
 
 .nav-logo a {
-  font-size: 1.45rem;
+  font-size: 1.4rem; /* UPDATED: balanced logo size */
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
@@ -45,7 +46,7 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem; /* 🔹 slightly tighter */
+  gap: 1.4rem; /* UPDATED */
   padding: 0;
   margin: 0;
 }
@@ -54,23 +55,13 @@ body {
   color: #cbd5f5;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem; /* 🔹 better desktop readability */
-  padding: 0.3rem 0.2rem;
+  font-size: 0.95rem; /* UPDATED: cross-platform readable */
+  padding: 0.25rem 0.15rem;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #38bdf8;
-}
-
-/* ---------- CTA ---------- */
-.nav-cta {
-  padding: 0.4rem 0.8rem; /* 🔹 balanced, not bulky */
-  border-radius: 6px;
-  background: #38bdf8;
-  color: #020617 !important;
-  font-weight: 600;
-  font-size: 0.9rem;
 }
 
 /* ---------- TOGGLE ---------- */
@@ -86,7 +77,7 @@ body {
 /* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding: 90px 20px 70px; /* 🔹 better fold usage */
+  padding: 90px 20px 70px;
   background: linear-gradient(180deg, #020617, #0f172a);
 }
 
@@ -109,10 +100,11 @@ body {
 }
 
 /* ---------- BUTTONS ---------- */
-.buttons a {
+.buttons a,
+.hero-buttons a {
   display: inline-block;
   margin: 8px;
-  padding: 11px 24px; /* 🔹 slightly smaller */
+  padding: 11px 24px;
   background: #38bdf8;
   color: #020617;
   text-decoration: none;
@@ -121,7 +113,8 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.buttons a:hover {
+.buttons a:hover,
+.hero-buttons a:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
 }
@@ -140,13 +133,7 @@ section h3 {
   padding-left: 12px;
 }
 
-/* ---------- INTRO ---------- */
-#intro p {
-  font-size: 1.05rem;
-  color: #d1d5db;
-}
-
-/* ---------- LIST STYLING ---------- */
+/* ---------- LIST ---------- */
 ul {
   list-style: none;
   padding: 0;
@@ -154,35 +141,10 @@ ul {
 
 ul li {
   background: #020617;
-  padding: 20px;
-  margin-bottom: 18px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
   border: 1px solid #1e293b;
-}
-
-/* ---------- PROJECTS ---------- */
-.view-more {
-  display: inline-block;
-  margin-top: 20px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.view-more:hover {
-  text-decoration: underline;
-}
-
-/* ---------- STATS ---------- */
-#stats ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-#stats li {
-  text-align: center;
-  font-weight: 600;
 }
 
 /* ---------- FOOTER ---------- */
@@ -206,14 +168,14 @@ footer a:hover {
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 58px; /* 🔹 aligns with reduced navbar */
+    top: 56px; /* UPDATED: matches reduced navbar */
     right: 12px;
     background: #020617;
     flex-direction: column;
     width: 210px;
     padding: 0.8rem;
     display: none;
-    border-radius: 8px; /* 🔹 modern floating menu */
+    border-radius: 8px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   }
 
@@ -222,7 +184,7 @@ footer a:hover {
   }
 
   .nav-links a {
-    padding: 0.55rem 0.4rem; /* 🔹 comfortable tap target */
+    padding: 0.55rem 0.4rem;
     font-size: 0.95rem;
   }
 
@@ -230,7 +192,6 @@ footer a:hover {
     display: block;
   }
 
-  /* 🔹 Responsive hero text */
   .hero h1 {
     font-size: 2.2rem;
   }
@@ -240,7 +201,7 @@ footer a:hover {
   }
 }
 
-/* Navbar shadow on scroll */
+/* ---------- SCROLL SHADOW ---------- */
 .navbar.scroll-shadow {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease;
