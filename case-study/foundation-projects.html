@@ -1,1 +1,338 @@
-<!-- # Space War, Runner, Snake, Sudoku, VR -->
+<!-- # Foundation-Projects - Space War, Runner, Snake, Sudoku, VR -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foundation Projects | Nikhil Chaudhary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #020617, #1e293b);
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            color: #22d3ee;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #cbd5f5;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #a5f3fc;
+            margin-top: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: #020617;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1e293b;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 5px 5px 0 0;
+        }
+
+        .links a {
+            display: inline-block;
+            margin-top: 12px;
+            margin-right: 15px;
+            background: #22d3ee;
+            color: #020617;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            background: #06b6d4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Foundation Projects</h1>
+    <p>
+        Early Unity projects that built my foundation in gameplay systems,
+        optimization, architecture, and engineering-driven problem solving.
+        These projects shaped how I approach production-level game development today.
+    </p>
+</header>
+
+<section>
+
+    <!-- INTRO -->
+    <div class="card">
+        <h2>📘 Why Foundation Projects Matter</h2>
+        <p>
+            These projects were built during my learning phase while pursuing my BCA
+            and early training at Deftsoft. Instead of focusing only on visuals,
+            I intentionally focused on:
+        </p>
+        <ul>
+            <li>Gameplay system design</li>
+            <li>Physics & collision optimization</li>
+            <li>Clean and maintainable architecture</li>
+            <li>Performance-conscious decisions</li>
+            <li>Research-driven problem solving</li>
+        </ul>
+        <p>
+            Many architectural patterns and optimization strategies I use today
+            in production games originated from lessons learned in these projects.
+        </p>
+    </div>
+
+    <!-- SPACE WAR -->
+    <div class="card">
+        <h2>🚀 Space War</h2>
+        <span class="badge">Android</span>
+        <span class="badge">2D Shooter</span>
+        <span class="badge">Collision Optimization</span>
+
+        <h3>Overview</h3>
+        <p>
+            A vertical endless shooter where the player battles waves of enemy ships
+            with varying health, damage, and attack patterns.
+        </p>
+
+        <h3>Core Systems Implemented</h3>
+        <ul>
+            <li>Enemy spawning and behavior control</li>
+            <li>Weapon, damage, and health systems</li>
+            <li>Multi-entity collision handling</li>
+            <li>Player and enemy destruction logic</li>
+        </ul>
+
+        <h3>Key Challenge</h3>
+        <p>
+            Initially, collision handling was implemented using multiple
+            <code>OnCollisionEnter</code> checks across scripts for:
+            bullets, players, enemies, and bullet-vs-bullet interactions.
+            This approach quickly became difficult to scale and inefficient.
+        </p>
+
+        <h3>Solution & Learning</h3>
+        <p>
+            I redesigned the system using Unity’s <strong>Layer Collision Matrix</strong>,
+            filtering interactions at the engine level instead of script-level checks.
+        </p>
+
+        <ul>
+            <li>Cleaner and more maintainable code</li>
+            <li>Reduced unnecessary collision checks</li>
+            <li>Improved performance and scalability</li>
+        </ul>
+
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1k66tYQfXYUDZgQfcYW42ZFQvEHl8jcW5/view" target="_blank">
+                ▶ Watch Gameplay
+            </a>
+        </div>
+    </div>
+
+    <!-- ENDLESS RUNNER -->
+    <div class="card">
+        <h2>🏃 Endless Runner</h2>
+        <span class="badge">Android</span>
+        <span class="badge">Optimization</span>
+        <span class="badge">DOTween</span>
+
+        <h3>Overview</h3>
+        <p>
+            A simple endless runner inspired by Chrome’s Dino Run,
+            focused on smooth visuals and efficient runtime performance.
+        </p>
+
+        <h3>Core Systems Implemented</h3>
+        <ul>
+            <li>Endless ground and background movement</li>
+            <li>Player jumping and obstacle interaction</li>
+            <li>DOTween-based smooth transitions</li>
+        </ul>
+
+        <h3>Key Challenge</h3>
+        <p>
+            Traditional endless runner designs rely on frequent spawning and destruction
+            of environment objects, which can cause CPU and GC overhead on mobile devices.
+        </p>
+
+        <h3>Solution & Learning</h3>
+        <p>
+            Instead of spawning objects, I implemented
+            <strong>texture offset scrolling</strong> for ground and background materials.
+        </p>
+
+        <ul>
+            <li>No runtime object instantiation</li>
+            <li>Smoother visual performance</li>
+            <li>Lower CPU and memory usage</li>
+        </ul>
+
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1kg0d0onaqjeXEH0_5EgZP55r8CgbN29a/view" target="_blank">
+                ▶ Watch Gameplay
+            </a>
+        </div>
+    </div>
+
+    <!-- SNAKE -->
+    <div class="card">
+        <h2>🐍 Snake Game</h2>
+        <span class="badge">Game Flow</span>
+        <span class="badge">Coroutines</span>
+        <span class="badge">Architecture</span>
+
+        <h3>Overview</h3>
+        <p>
+            A classic Snake game built to strengthen understanding of gameplay flow,
+            architecture, and runtime optimization.
+        </p>
+
+        <h3>Key Systems</h3>
+        <ul>
+            <li>Singleton-based Game Manager</li>
+            <li>Coroutine-driven gameplay loop</li>
+            <li>Delegate-based system communication</li>
+            <li>Efficient data structures for snake movement</li>
+        </ul>
+
+        <h3>Key Learning</h3>
+        <p>
+            Not all time-based logic belongs in <code>Update()</code>.
+            Coroutines often provide cleaner, safer, and more scalable solutions.
+        </p>
+
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1yCiS07_-4VxVl1l8VBO8_YTlKFVZ_5rm/view" target="_blank">
+                ▶ Watch Gameplay
+            </a>
+        </div>
+    </div>
+
+    <!-- SUDOKU -->
+    <div class="card">
+        <h2>🧩 Sudoku Game</h2>
+        <span class="badge">Algorithms</span>
+        <span class="badge">Backtracking</span>
+        <span class="badge">Logic Heavy</span>
+
+        <h3>Overview</h3>
+        <p>
+            A logic-heavy Sudoku game designed to evaluate algorithmic thinking,
+            data structures, and problem-solving ability under minimal guidance.
+        </p>
+
+        <h3>Key Highlights</h3>
+        <ul>
+            <li>Procedural puzzle generation</li>
+            <li>Sudoku solver using Backtracking algorithm</li>
+            <li>2D array data management</li>
+            <li>Visual UI feedback for inputs and validation</li>
+        </ul>
+
+        <h3>Growth Moment</h3>
+        <p>
+            After validating my initial logic, I researched the Backtracking algorithm,
+            understood it deeply, and translated it into clean, optimized C# code.
+        </p>
+
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/view" target="_blank">
+                ▶ Watch Gameplay
+            </a>
+        </div>
+    </div>
+
+    <!-- VR -->
+    <div class="card">
+        <h2>🕶️ VR Interaction Prototype</h2>
+        <span class="badge">XR Toolkit</span>
+        <span class="badge">Physics</span>
+        <span class="badge">R&D</span>
+
+        <h3>Overview</h3>
+        <p>
+            A VR interaction prototype built using Unity’s XR Interaction Toolkit,
+            focusing on physics-based interactions and scalable XR systems.
+        </p>
+
+        <h3>Key Systems</h3>
+        <ul>
+            <li>XR Interaction Toolkit setup</li>
+            <li>Velocity & kinematic grab interactions</li>
+            <li>Continuous Dynamic collision detection</li>
+            <li>XR Device Simulator for hardware-free testing</li>
+        </ul>
+
+        <h3>Key Learning</h3>
+        <p>
+            Researching tooling can remove hardware dependency and unblock development early.
+        </p>
+
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/view" target="_blank">
+                ▶ Watch Gameplay
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Nikhil Chaudhary · Unity Game Developer · Systems & Architecture
+</footer>
+
+</body>
+</html>
