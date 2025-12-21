@@ -1,0 +1,215 @@
+<!-- # Second Project -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplayer Card Game | Nikhil Chaudhary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b, #020617);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #cbd5f5;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: #020617;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            background: #1e293b;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #0f172a;
+            background: #38bdf8;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            background: #0ea5e9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Multiplayer Card Game</h1>
+    <p>
+        A real-time multiplayer card game built with Unity and Socket.IO,
+        focusing on synchronization, turn-based logic, room management,
+        and scalable client-server communication.
+    </p>
+</header>
+
+<section>
+    <div class="card">
+        <h2>🎮 Project Overview</h2>
+        <p>
+            This project is a **real-time multiplayer card game** designed to demonstrate
+            my expertise in **socket programming, event-driven networking,
+            turn-based systems, and clean multiplayer architecture**.
+        </p>
+        <p>
+            The game follows a **client-server model**, where the server acts as the
+            authoritative source of truth to ensure fairness, consistency,
+            and cheat prevention.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🧠 Core Gameplay Features</h2>
+        <ul>
+            <li>Real-time multiplayer gameplay using Socket.IO rooms</li>
+            <li>Turn-based card mechanics with server-side validation</li>
+            <li>Authoritative server logic for game state control</li>
+            <li>Player join / leave handling without breaking game flow</li>
+            <li>Consistent card state synchronization across all clients</li>
+            <li>Reconnect-safe gameplay with state rehydration</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🛠 Technical Architecture</h2>
+        <ul>
+            <li>MVP / Clean Architecture for UI and game logic separation</li>
+            <li>Server-authoritative game state management</li>
+            <li>Socket.IO event-based communication for gameplay actions</li>
+            <li>State Machines for game phases (Waiting → Playing → Result)</li>
+            <li>Data-driven card definitions using ScriptableObjects</li>
+            <li>Optimized network payloads to minimize latency and bandwidth</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🌐 Multiplayer & Networking Logic</h2>
+        <ul>
+            <li>Room-based matchmaking using Socket.IO namespaces / rooms</li>
+            <li>Server-controlled turn order and action validation</li>
+            <li>Event-driven synchronization instead of continuous polling</li>
+            <li>Custom socket events for turn updates and card actions</li>
+            <li>Graceful disconnect handling with server-side recovery</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🧰 Tech Stack</h2>
+        <div class="tech-stack">
+            <span>Unity (C#)</span>
+            <span>Socket.IO</span>
+            <span>Node.js</span>
+            <span>ScriptableObjects</span>
+            <span>State Machine</span>
+            <span>MVP Pattern</span>
+            <span>Git</span>
+            <span>Android / Windows</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🚧 Challenges & Solutions</h2>
+        <ul>
+            <li>
+                <strong>Challenge:</strong> Keeping all players synchronized in real time  
+                <br>
+                <strong>Solution:</strong> Used Socket.IO event-driven updates with
+                server-authoritative validation.
+            </li>
+            <li>
+                <strong>Challenge:</strong> Handling disconnects during active turns  
+                <br>
+                <strong>Solution:</strong> Maintained game state on the server and
+                re-sent state on reconnect.
+            </li>
+            <li>
+                <strong>Challenge:</strong> Preventing invalid or duplicate actions  
+                <br>
+                <strong>Solution:</strong> All actions are validated server-side
+                before being broadcast.
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎥 Media & Source Code</h2>
+        <p>You can explore the gameplay and code here:</p>
+        <div class="links">
+            <a href="#" target="_blank">▶ Gameplay Video</a>
+            <a href="#" target="_blank">💻 GitHub Repository</a>
+        </div>
+        <p style="margin-top:15px; font-size:14px; color:#94a3b8;">
+            (Links can be updated once public)
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Nikhil Chaudhary · Multiplayer Unity Game Developer
+</footer>
+
+</body>
+</html>

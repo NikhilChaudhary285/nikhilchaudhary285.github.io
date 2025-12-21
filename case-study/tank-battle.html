@@ -1,0 +1,204 @@
+<!-- # Fifth Project -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplayer Tank Battle Game | Nikhil Chaudhary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0f172a;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #020617, #1e293b);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #22d3ee;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #cbd5f5;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: #020617;
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .tech span {
+            display: inline-block;
+            background: #1e293b;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #020617;
+            background: #22d3ee;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            background: #06b6d4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #020617;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Multiplayer Tank Battle Game</h1>
+    <p>
+        A real-time multiplayer top-down tank battle game inspired by classic arcade gameplay,
+        built with scalable architecture, synchronized multiplayer systems, and modular level design.
+    </p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>📌 Project Overview</h2>
+        <p>
+            This project is a <strong>real-time multiplayer tank battle game</strong> designed for Android,
+            featuring fast-paced combat, tile-based levels, destructible environments, and synchronized
+            multiplayer gameplay.
+        </p>
+        <p>
+            The core focus of this project is to build a <strong>clean, scalable multiplayer architecture</strong>
+            that supports fair game starts, synchronized scenes, and rapid iteration of gameplay features.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>👨‍💻 My Role & Responsibilities</h2>
+        <ul>
+            <li>Implemented physics-based tank movement and rotation</li>
+            <li>Developed shooting, damage, and health systems</li>
+            <li>Designed tilemap-based levels with destructible tiles</li>
+            <li>Built ScriptableObject-driven tank, weapon, and upgrade configurations</li>
+            <li>Implemented enemy wave spawning system</li>
+            <li>Handled scene transitions and gameplay UI updates</li>
+            <li>Integrated real-time multiplayer using Photon (PUN)</li>
+            <li>Designed player-ready synchronization system for fair game start</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🧠 Core Systems & Architecture</h2>
+        <ul>
+            <li>Real-time multiplayer synchronization (room-based)</li>
+            <li>Player-ready & scene-load synchronization</li>
+            <li>Physics-based movement & collision handling</li>
+            <li>Tilemap-based modular level design</li>
+            <li>ScriptableObject-driven data architecture</li>
+            <li>Event-driven gameplay flow (Unity Events + Coroutines)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🚧 Multiplayer Challenges & Solutions</h2>
+        <ul>
+            <li>
+                <strong>Challenge:</strong> Ensuring all players start the match simultaneously  
+                <br>
+                <strong>Solution:</strong> Implemented a player-ready system using Photon room properties,
+                combined with <code>PhotonNetwork.AutomaticallySyncScene</code>.
+            </li>
+            <li>
+                <strong>Challenge:</strong> Supporting multiple tank types and weapons without hardcoding  
+                <br>
+                <strong>Solution:</strong> Used ScriptableObjects to define tanks, weapons, stats, and upgrades.
+            </li>
+            <li>
+                <strong>Challenge:</strong> Maintaining clean gameplay flow in a networked environment  
+                <br>
+                <strong>Solution:</strong> Structured gameplay using event-driven systems and coroutines
+                instead of heavy Update() logic.
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🧰 Tech Stack</h2>
+        <div class="tech">
+            <span>Unity (C#)</span>
+            <span>Photon (PUN)</span>
+            <span>Android</span>
+            <span>Tilemap System</span>
+            <span>ScriptableObjects</span>
+            <span>Unity Physics</span>
+            <span>Event-driven Architecture</span>
+            <span>Coroutines</span>
+            <span>Git</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🎥 Media</h2>
+        <p>Gameplay demonstration:</p>
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1p-b62e9rE4O7p42PqA77OJCi2lgRa590/view?usp=sharing" target="_blank">
+                ▶ Watch Gameplay Video
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Nikhil Chaudhary · Multiplayer Unity Engineer · Gameplay & Systems Architecture
+</footer>
+
+</body>
+</html>
