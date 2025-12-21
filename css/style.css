@@ -16,9 +16,9 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  background: #0f172a; /* Dark professional */
+  background: #0f172a;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25); /* slightly lighter */
 }
 
 .nav-container {
@@ -27,11 +27,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 20px;
+  padding: 0.75rem 20px; /* 🔹 reduced height for desktop UX */
 }
 
 .nav-logo a {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
@@ -41,10 +41,11 @@ body {
   color: #38bdf8;
 }
 
+/* ---------- NAV LINKS ---------- */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.8rem;
+  gap: 1.5rem; /* 🔹 slightly tighter */
   padding: 0;
   margin: 0;
 }
@@ -53,6 +54,8 @@ body {
   color: #cbd5f5;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem; /* 🔹 better desktop readability */
+  padding: 0.3rem 0.2rem;
   transition: color 0.2s ease;
 }
 
@@ -60,37 +63,42 @@ body {
   color: #38bdf8;
 }
 
+/* ---------- CTA ---------- */
 .nav-cta {
-  padding: 0.45rem 0.9rem;
+  padding: 0.4rem 0.8rem; /* 🔹 balanced, not bulky */
   border-radius: 6px;
   background: #38bdf8;
   color: #020617 !important;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
+/* ---------- TOGGLE ---------- */
 .nav-toggle {
   display: none;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #ffffff;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 /* ---------- HERO ---------- */
 .hero {
   text-align: center;
-  padding: 100px 20px 80px;
+  padding: 90px 20px 70px; /* 🔹 better fold usage */
   background: linear-gradient(180deg, #020617, #0f172a);
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
 .hero h2 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 500;
-  color: #38bdf8; /* sky-400 */
+  color: #38bdf8;
   margin-bottom: 20px;
 }
 
@@ -104,7 +112,7 @@ body {
 .buttons a {
   display: inline-block;
   margin: 8px;
-  padding: 12px 26px;
+  padding: 11px 24px; /* 🔹 slightly smaller */
   background: #38bdf8;
   color: #020617;
   text-decoration: none;
@@ -198,28 +206,42 @@ footer a:hover {
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 64px;
-    right: 0;
+    top: 58px; /* 🔹 aligns with reduced navbar */
+    right: 12px;
     background: #020617;
     flex-direction: column;
-    width: 220px;
-    padding: 1rem;
+    width: 210px;
+    padding: 0.8rem;
     display: none;
-    border-left: 1px solid #1e293b;
-    border-bottom: 1px solid #1e293b;
+    border-radius: 8px; /* 🔹 modern floating menu */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
   }
 
   .nav-links.active {
     display: flex;
   }
 
+  .nav-links a {
+    padding: 0.55rem 0.4rem; /* 🔹 comfortable tap target */
+    font-size: 0.95rem;
+  }
+
   .nav-toggle {
     display: block;
+  }
+
+  /* 🔹 Responsive hero text */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
   }
 }
 
 /* Navbar shadow on scroll */
 .navbar.scroll-shadow {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease;
 }

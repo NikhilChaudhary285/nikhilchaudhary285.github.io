@@ -5,30 +5,33 @@ const navbar = document.querySelector(".navbar");
 
 if (navToggle) {
     navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+        const isOpen = navLinks.classList.toggle("active");
+        navToggle.setAttribute("aria-expanded", isOpen);
     });
 }
 
-// ================= NAVBAR SCROLL SHADOW =================
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add("scroll-shadow");
-    } else {
-        navbar.classList.remove("scroll-shadow");
+// Close mobile menu when resizing to desktop
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", false);
     }
 });
 
-// ================= SMOOTH SCROLL =================
+// Navbar shadow on scroll
+window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scroll-shadow", window.scrollY > 50);
+});
+
+// Smooth scroll + close mobile menu
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", e => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(anchor.getAttribute("href"));
         if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            target.scrollIntoView({ behavior: "smooth" });
         }
-        // Close mobile menu after clicking a link
-        if (navLinks.classList.contains("active")) {
-            navLinks.classList.remove("active");
-        }
+        navLinks.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", false);
     });
 });
