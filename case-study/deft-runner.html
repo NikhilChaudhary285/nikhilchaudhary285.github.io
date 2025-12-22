@@ -1,96 +1,109 @@
 <!-- # Third Project -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Deft Runner (Alnahsha Run) | Nikhil Chaudhary</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Deft Runner | Case Study</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
             color: #e5e7eb;
-            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #020617, #1e293b);
-            padding: 60px 20px;
-            text-align: center;
+            padding: 20px 60px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            color: #22d3ee;
+            color: #38bdf8;
+            font-size: 22px;
         }
 
-        header p {
-            font-size: 18px;
+        nav a {
             color: #cbd5f5;
-            max-width: 900px;
-            margin: auto;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        section {
-            max-width: 1100px;
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .container {
+            max-width: 1000px;
             margin: auto;
             padding: 60px 20px;
         }
 
         h2 {
-            color: #22d3ee;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
+            color: #38bdf8;
             margin-bottom: 10px;
         }
 
-        .card {
-            background: #020617;
-            border-radius: 14px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        h3 {
+            color: #7dd3fc;
+            margin-top: 30px;
         }
 
-        .tech span {
-            display: inline-block;
-            background: #1e293b;
-            padding: 8px 14px;
-            margin: 6px;
-            border-radius: 20px;
+        p, li {
+            color: #d1d5db;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: #94a3b8;
             font-size: 14px;
+            margin-bottom: 20px;
         }
 
-        .links a {
+        .badge {
             display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #020617;
-            background: #22d3ee;
-            padding: 10px 18px;
-            border-radius: 6px;
-            font-weight: bold;
+            background: #020617;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px 5px 0 0;
+            font-size: 13px;
+            color: #cbd5f5;
         }
 
-        .links a:hover {
-            background: #06b6d4;
+        .impact {
+            background: #020617;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
         }
 
         footer {
-            text-align: center;
-            padding: 30px;
+            margin-top: 80px;
+            padding: 25px;
             background: #020617;
             color: #94a3b8;
+            text-align: center;
         }
     </style>
 </head>
@@ -98,103 +111,132 @@
 <body>
 
 <header>
-    <h1>Deft Runner (Alnahsha Run)</h1>
-    <p>
-        A large-scale endless runner mobile game developed at Deftsoft,
-        featuring city-themed environments and played by millions of users worldwide.
-    </p>
+    <h1>Nikhil Chaudhary</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../engineering.html">Engineering</a>
+        <a href="foundation-projects.html">Foundation</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
 </header>
 
-<section>
+<div class="container">
 
-    <div class="card">
-        <h2>📌 Project Overview</h2>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Deft Runner</h1>
+        <p class="meta">
+            Endless Runner • Android • Single Player • Performance-Optimized
+        </p>
+
+        <span class="badge">Unity</span>
+        <span class="badge">C#</span>
+        <span class="badge">Mobile Game</span>
+        <span class="badge">Endless Runner</span>
+        <span class="badge">Gameplay Systems</span>
+        <span class="badge">Optimization</span>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section>
+        <h2>Project Overview</h2>
         <p>
-            <strong>Alnahsha Run</strong> is a production-level endless runner game
-            built for Android, themed around iconic cities such as
-            <strong>Riyadh, Dubai, and Cairo</strong>.
+            <strong>Deft Runner</strong> is an Android endless runner game focused on
+            fast-paced gameplay, smooth controls, and increasing difficulty progression.
+            The game was built to deliver consistent performance across a wide range of devices.
         </p>
         <p>
-            The project has achieved <strong>5M+ downloads</strong> on the Play Store,
-            requiring a strong focus on performance, UI scalability,
-            and long-term maintainability.
+            I worked on this project as a Unity developer, contributing to gameplay systems,
+            player controls, obstacle mechanics, and performance optimizations.
         </p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h2>👨‍💻 My Role at Deftsoft</h2>
+    <!-- ROLE -->
+    <section>
+        <h2>My Role & Responsibilities</h2>
         <ul>
-            <li>Worked as a full-time Unity Game Developer on a live production game</li>
-            <li>Collaborated with designers, QA, and senior engineers</li>
-            <li>Improved gameplay features and resolved production bugs</li>
-            <li>Handled UI optimization for multiple Android devices</li>
-            <li>Contributed to live update and maintenance cycles</li>
-            <li>Worked under Git-based version control workflow</li>
+            <li>Implemented core endless runner gameplay mechanics</li>
+            <li>Designed player movement, jump, and collision systems</li>
+            <li>Built obstacle spawning and difficulty scaling logic</li>
+            <li>Worked on score progression and gameplay feedback systems</li>
+            <li>Optimized performance for smooth gameplay on low-end Android devices</li>
+            <li>Fixed gameplay bugs and improved overall game stability</li>
+            <li>Collaborated with designers to refine gameplay feel and pacing</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="card">
-        <h2>🧠 Core Systems & Contributions</h2>
-        <ul>
-            <li>Endless runner gameplay systems and player experience tuning</li>
-            <li>City-based themed UI and environment presentation</li>
-            <li>Reusable UI scaling system for different screen resolutions</li>
-            <li>Localization-ready UI layouts for multi-language support</li>
-            <li>Performance optimizations for low-end and mid-range devices</li>
-        </ul>
-    </div>
+    <!-- ENGINEERING -->
+    <section>
+        <h2>Engineering & System Design</h2>
 
-    <div class="card">
-        <h2>🚧 Challenges & Solutions</h2>
-        <ul>
-            <li>
-                <strong>Challenge:</strong> UI breaking across multiple screen sizes  
-                <br>
-                <strong>Solution:</strong> Designed a reusable UI scaling and anchoring system.
-            </li>
-            <li>
-                <strong>Challenge:</strong> Maintaining smooth performance on low-end devices  
-                <br>
-                <strong>Solution:</strong> Optimized UI redraws, asset usage, and scene complexity.
-            </li>
-            <li>
-                <strong>Challenge:</strong> Live production bug fixing without breaking features  
-                <br>
-                <strong>Solution:</strong> Followed disciplined Git workflow and staged testing.
-            </li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>🧰 Tech Stack</h2>
-        <div class="tech">
-            <span>Unity (C#)</span>
-            <span>Android</span>
-            <span>UI Toolkit / UGUI</span>
-            <span>Git</span>
-            <span>Play Store Deployment</span>
-            <span>Localization System</span>
-            <span>Performance Optimization</span>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>🎥 Media</h2>
+        <h3>Gameplay Loop Design</h3>
         <p>
-            Gameplay footage and store presence:
+            The core gameplay loop was designed around simplicity and responsiveness,
+            ensuring quick player feedback and smooth controls.
         </p>
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1ZjhA80vc11i3IVcC1PCAXfBZackmJEiZ/view?usp=sharing" target="_blank">▶ Gameplay Video</a>
-        </div>
-        <p style="margin-top:15px; font-size:14px; color:#94a3b8;">
-            (Public links can be added if permitted)
-        </p>
-    </div>
+        <ul>
+            <li>Frame-consistent player movement</li>
+            <li>Predictable obstacle patterns with increasing difficulty</li>
+            <li>Immediate feedback for collisions and scoring</li>
+        </ul>
 
-</section>
+        <h3>Obstacle & Difficulty Scaling</h3>
+        <p>
+            Difficulty increases progressively based on distance and score,
+            keeping players engaged without sudden difficulty spikes.
+        </p>
+
+        <h3>Mobile Performance Optimization</h3>
+        <p>
+            Focused on maintaining stable frame rates by optimizing update loops,
+            minimizing allocations, and managing object lifecycles efficiently.
+        </p>
+        <ul>
+            <li>Reduced runtime allocations</li>
+            <li>Optimized physics and collision checks</li>
+            <li>Ensured smooth gameplay across device tiers</li>
+        </ul>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section>
+        <h2>Challenges & Solutions</h2>
+
+        <h3>Challenge: Maintaining smooth performance on low-end devices</h3>
+        <p>
+            Endless runner games require consistent frame rates to feel responsive,
+            especially on budget Android devices.
+        </p>
+        <p>
+            <strong>Solution:</strong> Optimized gameplay scripts, reduced unnecessary updates,
+            and simplified collision handling to maintain stable performance.
+        </p>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="impact">
+        <h2>Impact & Results</h2>
+        <ul>
+            <li>Delivered smooth, responsive gameplay experience</li>
+            <li>Improved game stability through targeted bug fixes</li>
+            <li>Ensured consistent performance across multiple Android devices</li>
+            <li>Strengthened understanding of mobile gameplay optimization</li>
+        </ul>
+    </section>
+
+    <!-- MEDIA -->
+    <section>
+    <h2>Media</h2>
+        <p>🎥 <a href="https://drive.google.com/file/d/1ZjhA80vc11i3IVcC1PCAXfBZackmJEiZ/view?usp=sharing" target="_blank">Gameplay Video</a></p>
+    </section>
+
+</div>
 
 <footer>
-    © 2025 Nikhil Chaudhary · Unity Game Developer · Deftsoft Experience
+    © 2025 Nikhil Chaudhary | Deft Runner Case Study
 </footer>
 
 </body>

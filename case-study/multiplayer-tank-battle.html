@@ -1,0 +1,260 @@
+<!-- # Fifth Project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Multiplayer Tank Battle | Case Study</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        header {
+            padding: 20px 60px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #7dd3fc;
+            margin-top: 30px;
+        }
+
+        p, li {
+            color: #d1d5db;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #020617;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px 5px 0 0;
+            font-size: 13px;
+            color: #cbd5f5;
+        }
+
+        .impact {
+            background: #020617;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nikhil Chaudhary</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../engineering.html">Engineering</a>
+        <a href="foundation-projects.html">Foundation</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Multiplayer Tank Battle</h1>
+        <p class="meta">
+            Real-Time Multiplayer • Android • iOS • WebGL • Windows • 1–4 Players
+        </p>
+
+        <span class="badge">Unity</span>
+        <span class="badge">Photon PUN</span>
+        <span class="badge">Multiplayer</span>
+        <span class="badge">Clean Architecture</span>
+        <span class="badge">State Machines</span>
+        <span class="badge">Real-Time Sync</span>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            <strong>Multiplayer Tank Battle</strong> is a real-time, Battle City–inspired
+            multiplayer tank game supporting <strong>1–4 players</strong> per match.
+            The game is designed to run consistently across
+            <strong>Android, iOS, WebGL, and Windows</strong>.
+        </p>
+        <p>
+            This project was built to deeply understand multiplayer fundamentals such as
+            state synchronization, player authority, latency tolerance, and scalable room-based architecture.
+        </p>
+    </section>
+
+    <!-- ROLE -->
+    <section>
+        <h2>My Role & Responsibilities</h2>
+        <ul>
+            <li>Designed and implemented complete multiplayer architecture using Photon PUN</li>
+            <li>Built lobby, room creation, and dynamic player count system (1–4 players)</li>
+            <li>Implemented player-ready synchronization before gameplay start</li>
+            <li>Designed clean MVP-based UI architecture for multiplayer screens</li>
+            <li>Implemented synchronized spawning and gameplay initialization</li>
+            <li>Built modular enemy AI using State and Strategy patterns</li>
+            <li>Optimized network traffic to maintain smooth real-time gameplay</li>
+        </ul>
+    </section>
+
+    <!-- ENGINEERING -->
+    <section>
+        <h2>Engineering & System Design</h2>
+
+        <h3>Multiplayer Architecture (Photon PUN)</h3>
+        <p>
+            Multiplayer engineering focuses on maintaining
+            <strong>state consistency</strong>, handling network latency,
+            and ensuring fair gameplay.
+        </p>
+        <ul>
+            <li>Room-based architecture with dynamic player capacity (1–4)</li>
+            <li>Master-client authority for deterministic game flow</li>
+            <li>Player-ready state synchronization before scene load</li>
+            <li>Scene synchronization using <strong>AutomaticallySyncScene</strong></li>
+        </ul>
+
+        <p>
+            I preferred using <strong>Custom Room Properties</strong> and
+            <strong>RaiseEvent</strong> for deterministic synchronization,
+            avoiding excessive RPC usage to reduce network overhead.
+        </p>
+
+        <h3>Gameplay State Management</h3>
+        <p>
+            Implemented clean gameplay flow using state machines for both
+            players and AI-controlled enemy tanks.
+        </p>
+        <ul>
+            <li>Idle, Move, Attack, and Dead states</li>
+            <li>Strategy-based enemy behavior (target base, chase players, patrol)</li>
+            <li>Clear separation of gameplay logic and networking logic</li>
+        </ul>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section>
+        <h2>Challenges & Solutions</h2>
+
+        <h3>Challenge: Synchronizing game start across multiple players</h3>
+        <p>
+            Players often joined rooms at different times, causing desync issues
+            during gameplay initialization.
+        </p>
+
+        <p>
+            <strong>Solution:</strong> Implemented a player-ready system using Photon player properties.
+            The master client triggered scene synchronization only after all players confirmed readiness.
+        </p>
+
+        <h3>Challenge: Keeping gameplay responsive under network latency</h3>
+        <p>
+            <strong>Solution:</strong> Minimized network messages, used event-based sync,
+            and allowed local prediction for non-critical visuals.
+        </p>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="impact">
+        <h2>Impact & Results</h2>
+        <ul>
+            <li>Stable real-time multiplayer gameplay for up to 4 players</li>
+            <li>Clean, scalable multiplayer architecture</li>
+            <li>Consistent gameplay experience across platforms</li>
+            <li>Strong foundation for extending game modes and features</li>
+        </ul>
+    </section>
+
+    <!-- MEDIA -->
+    <section>
+        <h2>Gameplay & Source</h2>
+        <p>
+            🎥 <a href="https://drive.google.com/file/d/1p-b62e9rE4O7p42PqA77OJCi2lgRa590/view?usp=sharing" target="_blank">
+            Gameplay Video</a>
+        </p>
+        <p>
+            💻 <a href="https://github.com/NikhilChaudhary285/BattleCity-Multiplayer" target="_blank">
+            GitHub Repository</a>
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    © 2025 Nikhil Chaudhary | Multiplayer Tank Battle Case Study
+</footer>
+
+</body>
+</html>

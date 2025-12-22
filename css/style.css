@@ -206,3 +206,44 @@ footer a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease;
 }
+
+.project {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT */
+.content {
+    flex: 1;
+}
+
+/* RIGHT */
+.video {
+    flex: 1;
+}
+
+.video iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Buttons (basic) */
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-right: 10px;
+    background: #4da3ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn.secondary {
+    background: #333;
+}

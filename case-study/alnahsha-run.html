@@ -9,112 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
-        }
+        body { margin:0; font-family:'Poppins',sans-serif; background:#0f172a; color:#e5e7eb; }
+        header { padding:20px 60px; background:#020617; display:flex; justify-content:space-between; align-items:center; }
+        header h1 { color:#38bdf8; font-size:22px; }
+        nav a { color:#cbd5f5; margin-left:20px; text-decoration:none; }
+        nav a:hover { color:#38bdf8; }
 
-        header {
-            padding: 20px 60px;
-            background: #020617;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .container { max-width:1000px; margin:auto; padding:60px 20px; }
+        .hero h1 { font-size:38px; margin-bottom:10px; }
+        .meta { color:#94a3b8; margin-bottom:20px; }
 
-        header h1 {
-            color: #38bdf8;
-            font-size: 22px;
-        }
+        .badge { display:inline-block; background:#020617; padding:8px 14px; border-radius:20px; margin:5px 5px 0 0; font-size:13px; }
 
-        nav a {
-            color: #cbd5f5;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+        h2 { color:#38bdf8; margin-top:40px; }
+        h3 { color:#7dd3fc; margin-top:25px; }
+        p, li { color:#d1d5db; line-height:1.7; font-size:15px; }
+        ul { padding-left:18px; }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            color: #7dd3fc;
-            margin-top: 30px;
-        }
-
-        p, li {
-            color: #d1d5db;
-            line-height: 1.7;
-            font-size: 15px;
-        }
-
-        ul {
-            padding-left: 18px;
-        }
-
-        .hero {
-            margin-bottom: 50px;
-        }
-
-        .hero h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .meta {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #020617;
-            padding: 8px 14px;
-            border-radius: 20px;
-            margin: 5px 5px 0 0;
-            font-size: 13px;
-            color: #cbd5f5;
-        }
-
-        .video {
-            margin: 40px 0;
-        }
-
-        .video a {
-            color: #38bdf8;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .impact {
-            background: #020617;
-            padding: 30px;
-            border-radius: 12px;
-            margin-top: 40px;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-            text-align: center;
-        }
+        .impact { background:#020617; padding:30px; border-radius:12px; margin-top:40px; }
+        footer { margin-top:80px; padding:25px; background:#020617; color:#94a3b8; text-align:center; }
     </style>
 </head>
 
@@ -124,132 +37,102 @@
     <h1>Nikhil Chaudhary</h1>
     <nav>
         <a href="../index.html">Home</a>
-        <a href="../about.html">Journey</a>
         <a href="../projects.html">Projects</a>
         <a href="../engineering.html">Engineering</a>
-        <a href="../resume.html">Resume</a>
+        <a href="../foundation-projects.html">Foundation</a>
         <a href="../contact.html">Contact</a>
     </nav>
 </header>
 
 <div class="container">
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Alnahsha Run</h1>
-        <p class="meta">
-            Endless Runner • Android & iOS • 5M+ Downloads • Live Production Game
-        </p>
+<section class="hero">
+    <h1>Alnahsha Run</h1>
+    <p class="meta">Endless Runner • Android & iOS • 5M+ Downloads • Live Production Game</p>
 
-        <span class="badge">Unity</span>
-        <span class="badge">C#</span>
-        <span class="badge">Mobile Optimization</span>
-        <span class="badge">UI Scaling</span>
-        <span class="badge">Localization</span>
-        <span class="badge">Live Ops</span>
-    </section>
+    <span class="badge">Unity</span>
+    <span class="badge">C#</span>
+    <span class="badge">Mobile Optimization</span>
+    <span class="badge">UI Scaling</span>
+    <span class="badge">Localization</span>
+    <span class="badge">Live Ops</span>
+</section>
 
-    <!-- OVERVIEW -->
-    <section>
-        <h2>Project Overview</h2>
-        <p>
-            <strong>Alnahsha Run</strong> is a large-scale endless runner game themed around
-            iconic cities such as <strong>Riyadh, Dubai, and Cairo</strong>, designed for a
-            global mobile audience. The game has crossed <strong>5 million downloads</strong>
-            across Android and iOS platforms.
-        </p>
-        <p>
-            I worked on this project as part of the production Unity team at Deftsoft, contributing
-            to gameplay improvements, UI systems, optimization, and live bug-fix cycles.
-        </p>
-    </section>
+<section>
+    <h2>Project Overview</h2>
+    <p>
+        <strong>Alnahsha Run</strong> is a large-scale endless runner themed around iconic cities
+        such as Riyadh, Dubai, and Cairo. The game has crossed <strong>5M+ downloads</strong>
+        across Android and iOS.
+    </p>
+    <p>
+        I worked as a Unity Developer on the live production team at Deftsoft,
+        contributing to gameplay improvements, UI systems, optimization,
+        and live bug-fix cycles.
+    </p>
+</section>
 
-    <!-- ROLE -->
-    <section>
-        <h2>My Role & Responsibilities</h2>
-        <ul>
-            <li>Collaborated on player experience improvements and UI systems</li>
-            <li>Designed reusable UI tools for city-themed level content</li>
-            <li>Built a dynamic UI scaling system for multiple screen sizes</li>
-            <li>Made UI fully localization-ready for global audiences</li>
-            <li>Assisted with gameplay feature improvements and bug fixing</li>
-            <li>Participated in optimization and live production bug-fix cycles</li>
-            <li>Collaborated using Git-based workflows with designers and developers</li>
-        </ul>
-    </section>
+<section>
+    <h2>My Role & Responsibilities</h2>
+    <ul>
+        <li>Developed reusable UI systems for scalable city-based content</li>
+        <li>Implemented dynamic UI scaling for multiple screen sizes</li>
+        <li>Made UI layouts localization-ready for global markets</li>
+        <li>Worked on gameplay improvements and production bug fixes</li>
+        <li>Collaborated using Git-based workflows with designers and engineers</li>
+    </ul>
+</section>
 
-    <!-- ENGINEERING -->
-    <section>
-        <h2>Engineering & System Design</h2>
+<section>
+    <h2>Engineering & System Design</h2>
 
-        <h3>Reusable UI Scaling System</h3>
-        <p>
-            One of my key contributions was designing a reusable UI scaling system that allowed
-            UI layouts to adapt consistently across a wide range of mobile screen sizes and aspect ratios.
-        </p>
-        <ul>
-            <li>Reduced manual UI fixes during content updates</li>
-            <li>Improved visual consistency across devices</li>
-            <li>Enabled faster iteration for new city themes</li>
-        </ul>
+    <h3>Reusable UI Scaling System</h3>
+    <p>
+        Designed a flexible UI scaling system that adapted cleanly across
+        multiple aspect ratios without manual fixes.
+    </p>
 
-        <h3>Localization-Ready UI</h3>
-        <p>
-            I helped restructure UI layouts to support localization, ensuring text expansion
-            and right-to-left languages could be handled without breaking layouts.
-        </p>
+    <h3>Localization-Ready Architecture</h3>
+    <p>
+        Structured UI layouts to support text expansion and RTL languages
+        without breaking visual hierarchy.
+    </p>
 
-        <h3>Live Game Optimization</h3>
-        <p>
-            Worked on performance and stability improvements during live production cycles,
-            ensuring UI updates and gameplay changes did not introduce regressions
-            for millions of active users.
-        </p>
-    </section>
+    <h3>Live Game Optimization</h3>
+    <p>
+        Assisted with performance and stability improvements during live
+        production updates impacting millions of users.
+    </p>
+</section>
 
-    <!-- CHALLENGES -->
-    <section>
-        <h2>Challenges & Solutions</h2>
+<section>
+    <h2>Challenges & Solutions</h2>
+    <p>
+        <strong>Challenge:</strong> Maintaining UI consistency across a wide
+        range of devices and languages.
+    </p>
+    <p>
+        <strong>Solution:</strong> Designed scalable layouts and reusable UI
+        rules that minimized regression during live updates.
+    </p>
+</section>
 
-        <h3>Challenge: UI consistency across diverse devices</h3>
-        <p>
-            Supporting a global user base meant handling a wide range of resolutions,
-            aspect ratios, and language lengths.
-        </p>
+<section class="impact">
+    <h2>Impact & Results</h2>
+    <ul>
+        <li>Improved UI consistency across Android & iOS devices</li>
+        <li>Reduced UI-related regressions in live builds</li>
+        <li>Enabled faster rollout of new themed content</li>
+        <li>Contributed to stability of a 5M+ user production game</li>
+    </ul>
+</section>
 
-        <p>
-            <strong>Solution:</strong> Designed flexible layouts, scalable UI rules,
-            and reusable UI components that could be safely reused across themes and updates.
-        </p>
-    </section>
-
-    <!-- IMPACT -->
-    <section class="impact">
-        <h2>Impact & Results</h2>
-        <ul>
-            <li>Improved UI consistency across multiple devices</li>
-            <li>Reduced UI-related bugs during live updates</li>
-            <li>Enabled faster content rollout for new city themes</li>
-            <li>Contributed to stability of a live game with 5M+ users</li>
-        </ul>
-    </section>
-
-    <!-- MEDIA -->
-    <section class="video">
-        <h2>Gameplay & Store Links</h2>
-        <p>
-            🎥 <a href="https://drive.google.com/file/d/1nCoM8EgQByPL0qwkNE9VH8T2wXpjZ-mY/view" target="_blank">
-            Gameplay Video</a>
-        </p>
-        <p>
-            📱 <a href="https://play.google.com/store/apps/details?id=com.moderndoctors.alnahsharun" target="_blank">
-            Google Play Store</a>
-        </p>
-        <p>
-            🍎 <a href="https://apps.apple.com/tr/app/%D8%A7%D9%84%D9%86%D8%AD%D8%B4%D8%A9-run/id1473582650" target="_blank">
-            Apple App Store</a>
-        </p>
-    </section>
+<section>
+    <h2>Media & Store Links</h2>
+    <p>🎥 <a href="https://drive.google.com/file/d/1nCoM8EgQByPL0qwkNE9VH8T2wXpjZ-mY/view" target="_blank">Gameplay Video</a></p>
+    <p> 📱 <a href="https://play.google.com/store/apps/details?id=com.moderndoctors.alnahsharun" target="_blank"> Google Play Store</a> </p>
+    <p> 🍎 <a href="https://apps.apple.com/tr/app/%D8%A7%D9%84%D9%86%D8%AD%D8%B4%D8%A9-run/id1473582650" target="_blank"> Apple App Store</a> </p>
+</section>
 
 </div>
 

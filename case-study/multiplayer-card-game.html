@@ -1,96 +1,109 @@
 <!-- # Second Project -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Multiplayer Card Game | Nikhil Chaudhary</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Multiplayer Card Game | Case Study</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
             color: #e5e7eb;
-            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #1e293b, #020617);
-            padding: 60px 20px;
-            text-align: center;
+            padding: 20px 60px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
             color: #38bdf8;
         }
 
-        header p {
-            font-size: 18px;
-            color: #cbd5f5;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section {
-            max-width: 1100px;
+        .container {
+            max-width: 1000px;
             margin: auto;
             padding: 60px 20px;
         }
 
         h2 {
             color: #38bdf8;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #7dd3fc;
+            margin-top: 30px;
+        }
+
+        p, li {
+            color: #d1d5db;
+            line-height: 1.7;
+            font-size: 15px;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 18px;
         }
 
-        li {
-            margin-bottom: 8px;
+        .hero {
+            margin-bottom: 50px;
         }
 
-        .card {
-            background: #020617;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
         }
 
-        .tech-stack span {
-            display: inline-block;
-            background: #1e293b;
-            padding: 8px 14px;
-            margin: 6px;
-            border-radius: 20px;
+        .meta {
+            color: #94a3b8;
             font-size: 14px;
+            margin-bottom: 20px;
         }
 
-        .links a {
+        .badge {
             display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #0f172a;
-            background: #38bdf8;
-            padding: 10px 16px;
-            border-radius: 6px;
-            font-weight: bold;
+            background: #020617;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px 5px 0 0;
+            font-size: 13px;
+            color: #cbd5f5;
         }
 
-        .links a:hover {
-            background: #0ea5e9;
+        .impact {
+            background: #020617;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
         }
 
         footer {
-            text-align: center;
-            padding: 30px;
+            margin-top: 80px;
+            padding: 25px;
             background: #020617;
             color: #94a3b8;
+            text-align: center;
         }
     </style>
 </head>
@@ -98,117 +111,163 @@
 <body>
 
 <header>
-    <h1>Multiplayer Card Game</h1>
-    <p>
-        A real-time multiplayer card game built with Unity and Socket.IO,
-        focusing on synchronization, turn-based logic, room management,
-        and scalable client-server communication.
-    </p>
+    <h1>Nikhil Chaudhary</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../engineering.html">Engineering</a>
+        <a href="foundation-projects.html">Foundation</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
 </header>
 
-<section>
-    <div class="card">
-        <h2>🎮 Project Overview</h2>
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Multiplayer Card Game</h1>
+        <p class="meta">
+            Real-Time Multiplayer • Android • Socket.IO • Firebase-Enabled
+        </p>
+
+        <span class="badge">Unity</span>
+        <span class="badge">C#</span>
+        <span class="badge">Socket.IO</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">Firebase Auth</span>
+        <span class="badge">FCM Push</span>
+        <span class="badge">Social Invites</span>
+        <span class="badge">Real-Time Multiplayer</span>
+        <span class="badge">State Synchronization</span>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section>
+        <h2>Project Overview</h2>
         <p>
-            This project is a **real-time multiplayer card game** designed to demonstrate
-            my expertise in **socket programming, event-driven networking,
-            turn-based systems, and clean multiplayer architecture**.
+            <strong>Multiplayer Card Game</strong> is a real-time online card game built for Android,
+            designed to support smooth multiplayer gameplay using a custom
+            <strong>Socket.IO client–server architecture</strong>.
         </p>
         <p>
-            The game follows a **client-server model**, where the server acts as the
-            authoritative source of truth to ensure fairness, consistency,
-            and cheat prevention.
+            The project integrates <strong>Firebase Authentication</strong> for secure user login,
+            <strong>Firebase Cloud Messaging</strong> for real-time notifications, and
+            <strong>social invite flows</strong> to improve player engagement and retention.
         </p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h2>🧠 Core Gameplay Features</h2>
+    <!-- ROLE -->
+    <section>
+        <h2>My Role & Responsibilities</h2>
         <ul>
-            <li>Real-time multiplayer gameplay using Socket.IO rooms</li>
-            <li>Turn-based card mechanics with server-side validation</li>
-            <li>Authoritative server logic for game state control</li>
-            <li>Player join / leave handling without breaking game flow</li>
-            <li>Consistent card state synchronization across all clients</li>
-            <li>Reconnect-safe gameplay with state rehydration</li>
+            <li>Designed and implemented real-time multiplayer architecture using Socket.IO</li>
+            <li>Built client-side networking layer in Unity (C#)</li>
+            <li>Integrated Node.js backend for room management and game state handling</li>
+            <li>Implemented turn-based game flow with server-authoritative validation</li>
+            <li>Handled player join, disconnect, and reconnection scenarios</li>
+            <li>Optimized network message payloads to reduce bandwidth usage</li>
+            <li>Ensured fair gameplay by preventing client-side state manipulation</li>
+
+            <!-- Firebase Additions -->
+            <li>Integrated Firebase Authentication with Google and social sign-in providers</li>
+            <li>Implemented Firebase Cloud Messaging for match invites and game notifications</li>
+            <li>Built social invite sharing via WhatsApp and native platform share intents</li>
+            <li>Linked authenticated users with multiplayer sessions securely</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="card">
-        <h2>🛠 Technical Architecture</h2>
-        <ul>
-            <li>MVP / Clean Architecture for UI and game logic separation</li>
-            <li>Server-authoritative game state management</li>
-            <li>Socket.IO event-based communication for gameplay actions</li>
-            <li>State Machines for game phases (Waiting → Playing → Result)</li>
-            <li>Data-driven card definitions using ScriptableObjects</li>
-            <li>Optimized network payloads to minimize latency and bandwidth</li>
-        </ul>
-    </div>
+    <!-- ENGINEERING -->
+    <section>
+        <h2>Engineering & System Design</h2>
 
-    <div class="card">
-        <h2>🌐 Multiplayer & Networking Logic</h2>
-        <ul>
-            <li>Room-based matchmaking using Socket.IO namespaces / rooms</li>
-            <li>Server-controlled turn order and action validation</li>
-            <li>Event-driven synchronization instead of continuous polling</li>
-            <li>Custom socket events for turn updates and card actions</li>
-            <li>Graceful disconnect handling with server-side recovery</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>🧰 Tech Stack</h2>
-        <div class="tech-stack">
-            <span>Unity (C#)</span>
-            <span>Socket.IO</span>
-            <span>Node.js</span>
-            <span>ScriptableObjects</span>
-            <span>State Machine</span>
-            <span>MVP Pattern</span>
-            <span>Git</span>
-            <span>Android / Windows</span>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>🚧 Challenges & Solutions</h2>
-        <ul>
-            <li>
-                <strong>Challenge:</strong> Keeping all players synchronized in real time  
-                <br>
-                <strong>Solution:</strong> Used Socket.IO event-driven updates with
-                server-authoritative validation.
-            </li>
-            <li>
-                <strong>Challenge:</strong> Handling disconnects during active turns  
-                <br>
-                <strong>Solution:</strong> Maintained game state on the server and
-                re-sent state on reconnect.
-            </li>
-            <li>
-                <strong>Challenge:</strong> Preventing invalid or duplicate actions  
-                <br>
-                <strong>Solution:</strong> All actions are validated server-side
-                before being broadcast.
-            </li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>🎥 Media & Source Code</h2>
-        <p>You can explore the gameplay and code here:</p>
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1qN2d6zHONrlRwKGGro0xoBqKicwFMzhH/view?usp=sharing" target="_blank">▶ Gameplay Video</a>
-            <!-- <a href="#" target="_blank">💻 GitHub Repository</a> -->
-        </div>
-        <p style="margin-top:15px; font-size:14px; color:#94a3b8;">
-            (Links can be updated once public)
+        <h3>Client–Server Multiplayer Architecture</h3>
+        <p>
+            The game uses a centralized server model where the backend acts as the single source
+            of truth for game state, ensuring consistency and fairness.
         </p>
-    </div>
-</section>
+        <ul>
+            <li>Server-managed rooms and player sessions</li>
+            <li>Authoritative turn validation on the backend</li>
+            <li>Event-driven communication using Socket.IO</li>
+        </ul>
+
+        <h3>Firebase Authentication & Player Identity</h3>
+        <p>
+            Firebase Authentication was used to provide secure and frictionless login
+            using Google and social providers, allowing players to persist identity
+            across sessions and devices.
+        </p>
+        <ul>
+            <li>Token-based authentication for backend validation</li>
+            <li>Seamless account recovery and session persistence</li>
+        </ul>
+
+        <h3>Push Notifications & Social Invites</h3>
+        <p>
+            Firebase Cloud Messaging enables push notifications for game events such as
+            match invites, turn reminders, and re-engagement prompts.
+        </p>
+        <ul>
+            <li>Match invite notifications via FCM</li>
+            <li>Deep-link support for opening game rooms</li>
+            <li>Social sharing through WhatsApp and platform-native share APIs</li>
+        </ul>
+
+        <h3>Network Optimization</h3>
+        <p>
+            Reduced unnecessary data transmission by sending only essential state updates
+            instead of full game state snapshots on every action.
+        </p>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section>
+        <h2>Challenges & Solutions</h2>
+
+        <h3>Challenge: Secure multiplayer access and identity management</h3>
+        <p>
+            Multiplayer games require trusted player identity to prevent impersonation
+            and abuse.
+        </p>
+        <p>
+            <strong>Solution:</strong> Integrated Firebase Authentication and validated
+            authenticated user tokens on the backend before allowing multiplayer actions.
+        </p>
+
+        <h3>Challenge: Maintaining game state consistency in real-time</h3>
+        <p>
+            With multiple players performing actions concurrently, maintaining a single,
+            authoritative game state was critical.
+        </p>
+        <p>
+            <strong>Solution:</strong> Implemented server-authoritative logic where the backend
+            validates every move and emits synchronized events to all clients.
+        </p>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="impact">
+        <h2>Impact & Results</h2>
+        <ul>
+            <li>Improved player onboarding with frictionless social sign-in</li>
+            <li>Increased engagement using push notifications and social invites</li>
+            <li>Achieved secure, cheat-resistant multiplayer gameplay</li>
+            <li>Built a scalable multiplayer foundation combining Firebase and Socket.IO</li>
+        </ul>
+    </section>
+
+    <!-- MEDIA -->
+    <section>
+    <h2>Media</h2>
+        <p>🎥 <a href="https://drive.google.com/file/d/1qN2d6zHONrlRwKGGro0xoBqKicwFMzhH/view?usp=sharing" target="_blank">Gameplay Video</a></p>
+    </section>
+
+</div>
 
 <footer>
-    © 2025 Nikhil Chaudhary · Multiplayer Unity Game Developer
+    © 2025 Nikhil Chaudhary | Multiplayer Card Game Case Study
 </footer>
 
 </body>

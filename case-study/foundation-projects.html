@@ -2,52 +2,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Foundation Projects | Nikhil Chaudhary</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
             color: #e5e7eb;
-            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #020617, #1e293b);
-            padding: 70px 20px;
+            padding: 50px 20px;
+            background: #020617;
             text-align: center;
         }
 
         header h1 {
-            font-size: 42px;
-            color: #22d3ee;
+            color: #38bdf8;
+            font-size: 36px;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 18px;
             color: #cbd5f5;
-            max-width: 1000px;
+            max-width: 900px;
             margin: auto;
         }
 
-        section {
+        .container {
             max-width: 1150px;
             margin: auto;
             padding: 60px 20px;
         }
 
-        h2 {
-            color: #22d3ee;
+        .project {
+            background: #020617;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+
+        .project h3 {
+            color: #7dd3fc;
+            margin-bottom: 10px;
+        }
+
+        .tags {
             margin-bottom: 15px;
         }
 
-        h3 {
-            color: #a5f3fc;
-            margin-top: 30px;
+        .tag {
+            display: inline-block;
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 6px;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #d1d5db;
         }
 
         ul {
@@ -55,280 +84,343 @@
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        .card {
-            background: #020617;
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        iframe {
+            width: 100%;
+            height: 260px;
+            border-radius: 12px;
+            border: none;
         }
 
-        .badge {
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
             display: inline-block;
-            background: #1e293b;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin: 5px 5px 0 0;
-        }
-
-        .links a {
-            display: inline-block;
-            margin-top: 12px;
-            margin-right: 15px;
-            background: #22d3ee;
+            background: #38bdf8;
             color: #020617;
             padding: 10px 18px;
-            border-radius: 6px;
+            border-radius: 8px;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
+            margin-right: 10px;
         }
 
-        .links a:hover {
-            background: #06b6d4;
+        .btn.secondary {
+            background: #1e293b;
+            color: #38bdf8;
         }
 
         footer {
             text-align: center;
-            padding: 35px;
+            padding: 30px;
             background: #020617;
             color: #94a3b8;
+        }
+
+        @media (max-width: 900px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Global Navbar Header */
+        .site-header {
+            padding: 20px 60px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-header h1 {
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+        .site-header nav a {
+            color: #cbd5f5;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .site-header nav a:hover,
+        .site-header nav a.active {
+            color: #38bdf8;
+        }
+
+        /* Page Intro Header */
+        .page-header {
+            padding: 50px 20px;
+            background: #020617;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
-<header>
+<!-- ===== Global Navigation Header ===== -->
+<header class="site-header">
+    <h1>Nikhil Chaudhary</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../engineering.html">Engineering</a>
+        <a href="foundation-projects.html">Foundation</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- ===== Page Intro Header ===== -->
+<header class="page-header">
     <h1>Foundation Projects</h1>
     <p>
-        Early Unity projects that built my foundation in gameplay systems,
-        optimization, architecture, and engineering-driven problem solving.
-        These projects shaped how I approach production-level game development today.
+        Early Unity projects that shaped my understanding of gameplay systems,
+        optimization, and clean engineering practices used in production today.
     </p>
 </header>
 
-<section>
-
-    <!-- INTRO -->
-    <div class="card">
-        <h2>📘 Why Foundation Projects Matter</h2>
-        <p>
-            These projects were built during my learning phase while pursuing my BCA
-            and early training at Deftsoft. Instead of focusing only on visuals,
-            I intentionally focused on:
-        </p>
-        <ul>
-            <li>Gameplay system design</li>
-            <li>Physics & collision optimization</li>
-            <li>Clean and maintainable architecture</li>
-            <li>Performance-conscious decisions</li>
-            <li>Research-driven problem solving</li>
-        </ul>
-        <p>
-            Many architectural patterns and optimization strategies I use today
-            in production games originated from lessons learned in these projects.
-        </p>
+<div class="container">
+<!-- ================= SPACE WAR ================= -->
+<div class="project">
+    <h3>🚀 Space War</h3>
+    <div class="tags">
+        <span class="tag">Unity</span>
+        <span class="tag">Android</span>
+        <span class="tag">2D Shooter</span>
+        <span class="tag">Collision Optimization</span>
     </div>
 
-    <!-- SPACE WAR -->
-    <div class="card">
-        <h2>🚀 Space War</h2>
-        <span class="badge">Android</span>
-        <span class="badge">2D Shooter</span>
-        <span class="badge">Collision Optimization</span>
+    <div class="project-content">
+        <div>
+            <p><strong>Overview:</strong></p>
+            <p>
+                A vertical endless shooter featuring enemy waves with
+                varying health, damage, and attack patterns.
+            </p>
 
-        <h3>Overview</h3>
-        <p>
-            A vertical endless shooter where the player battles waves of enemy ships
-            with varying health, damage, and attack patterns.
-        </p>
+            <p><strong>Core Systems:</strong></p>
+            <ul>
+                <li>Enemy spawning & attack behaviors</li>
+                <li>Weapon, damage & health systems</li>
+                <li>Multi-entity collision handling</li>
+            </ul>
 
-        <h3>Core Systems Implemented</h3>
-        <ul>
-            <li>Enemy spawning and behavior control</li>
-            <li>Weapon, damage, and health systems</li>
-            <li>Multi-entity collision handling</li>
-            <li>Player and enemy destruction logic</li>
-        </ul>
+            <p><strong>Engineering Challenge:</strong></p>
+            <p>
+                Collision logic became complex and inefficient due to
+                multiple script-level collision checks.
+            </p>
 
-        <h3>Key Challenge</h3>
-        <p>
-            Initially, collision handling was implemented using multiple
-            <code>OnCollisionEnter</code> checks across scripts for:
-            bullets, players, enemies, and bullet-vs-bullet interactions.
-            This approach quickly became difficult to scale and inefficient.
-        </p>
+            <p><strong>Solution:</strong></p>
+            <p>
+                Redesigned collision handling using Unity’s
+                <strong>Layer Collision Matrix</strong> to offload filtering to the engine.
+            </p>
 
-        <h3>Solution & Learning</h3>
-        <p>
-            I redesigned the system using Unity’s <strong>Layer Collision Matrix</strong>,
-            filtering interactions at the engine level instead of script-level checks.
-        </p>
+            <div class="buttons">
+                <a href="https://github.com/NikhilChaudhary285/Space-War"
+                    class="btn"
+                    target="_blank">
+                    GitHub
+                </a>
 
-        <ul>
-            <li>Cleaner and more maintainable code</li>
-            <li>Reduced unnecessary collision checks</li>
-            <li>Improved performance and scalability</li>
-        </ul>
+                <a href="https://drive.google.com/file/d/1k66tYQfXYUDZgQfcYW42ZFQvEHl8jcW5/view"
+                   class="btn secondary" target="_blank">▶ Gameplay Video</a>
+            </div>
+        </div>
 
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1k66tYQfXYUDZgQfcYW42ZFQvEHl8jcW5/view" target="_blank">
-                ▶ Watch Gameplay
-            </a>
+        <div>
+            <iframe src="https://drive.google.com/file/d/1k66tYQfXYUDZgQfcYW42ZFQvEHl8jcW5/preview"
+                    allowfullscreen loading="lazy"></iframe>
         </div>
     </div>
+</div>
 
-    <!-- ENDLESS RUNNER -->
-    <div class="card">
-        <h2>🏃 Endless Runner</h2>
-        <span class="badge">Android</span>
-        <span class="badge">Optimization</span>
-        <span class="badge">DOTween</span>
-
-        <h3>Overview</h3>
-        <p>
-            A simple endless runner inspired by Chrome’s Dino Run,
-            focused on smooth visuals and efficient runtime performance.
-        </p>
-
-        <h3>Core Systems Implemented</h3>
-        <ul>
-            <li>Endless ground and background movement</li>
-            <li>Player jumping and obstacle interaction</li>
-            <li>DOTween-based smooth transitions</li>
-        </ul>
-
-        <h3>Key Challenge</h3>
-        <p>
-            Traditional endless runner designs rely on frequent spawning and destruction
-            of environment objects, which can cause CPU and GC overhead on mobile devices.
-        </p>
-
-        <h3>Solution & Learning</h3>
-        <p>
-            Instead of spawning objects, I implemented
-            <strong>texture offset scrolling</strong> for ground and background materials.
-        </p>
-
-        <ul>
-            <li>No runtime object instantiation</li>
-            <li>Smoother visual performance</li>
-            <li>Lower CPU and memory usage</li>
-        </ul>
-
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1kg0d0onaqjeXEH0_5EgZP55r8CgbN29a/view" target="_blank">
-                ▶ Watch Gameplay
-            </a>
-        </div>
+<!-- ================= ENDLESS RUNNER ================= -->
+<div class="project">
+    <h3>🏃 Endless Runner</h3>
+    <div class="tags">
+        <span class="tag">Unity</span>
+        <span class="tag">Android</span>
+        <span class="tag">Optimization</span>
+        <span class="tag">DOTween</span>
     </div>
 
-    <!-- SNAKE -->
-    <div class="card">
-        <h2>🐍 Snake Game</h2>
-        <span class="badge">Game Flow</span>
-        <span class="badge">Coroutines</span>
-        <span class="badge">Architecture</span>
+    <div class="project-content">
+        <div>
+            <p><strong>Overview:</strong></p>
+            <p>
+                A performance-focused endless runner inspired by Chrome Dino,
+                emphasizing smooth visuals on mobile devices.
+            </p>
 
-        <h3>Overview</h3>
-        <p>
-            A classic Snake game built to strengthen understanding of gameplay flow,
-            architecture, and runtime optimization.
-        </p>
+            <p><strong>Key Learning:</strong></p>
+            <p>
+                Replaced runtime spawning with
+                <strong>texture offset scrolling</strong>
+                for ground and background.
+            </p>
 
-        <h3>Key Systems</h3>
-        <ul>
-            <li>Singleton-based Game Manager</li>
-            <li>Coroutine-driven gameplay loop</li>
-            <li>Delegate-based system communication</li>
-            <li>Efficient data structures for snake movement</li>
-        </ul>
+            <ul>
+                <li>No object instantiation at runtime</li>
+                <li>Reduced GC pressure</li>
+                <li>Smoother frame stability</li>
+            </ul>
 
-        <h3>Key Learning</h3>
-        <p>
-            Not all time-based logic belongs in <code>Update()</code>.
-            Coroutines often provide cleaner, safer, and more scalable solutions.
-        </p>
+            <div class="buttons">
+                <a href="https://github.com/NikhilChaudhary285/Runner-Game"
+                    class="btn"
+                    target="_blank">
+                    GitHub
+                </a>
 
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1yCiS07_-4VxVl1l8VBO8_YTlKFVZ_5rm/view" target="_blank">
-                ▶ Watch Gameplay
-            </a>
+                <a href="https://drive.google.com/file/d/1kg0d0onaqjeXEH0_5EgZP55r8CgbN29a/view"
+                   class="btn secondary" target="_blank">▶ Gameplay Video</a>
+            </div>
+        </div>
+
+        <div>
+            <iframe src="https://drive.google.com/file/d/1kg0d0onaqjeXEH0_5EgZP55r8CgbN29a/preview"
+                    allowfullscreen loading="lazy"></iframe>
         </div>
     </div>
+</div>
 
-    <!-- SUDOKU -->
-    <div class="card">
-        <h2>🧩 Sudoku Game</h2>
-        <span class="badge">Algorithms</span>
-        <span class="badge">Backtracking</span>
-        <span class="badge">Logic Heavy</span>
-
-        <h3>Overview</h3>
-        <p>
-            A logic-heavy Sudoku game designed to evaluate algorithmic thinking,
-            data structures, and problem-solving ability under minimal guidance.
-        </p>
-
-        <h3>Key Highlights</h3>
-        <ul>
-            <li>Procedural puzzle generation</li>
-            <li>Sudoku solver using Backtracking algorithm</li>
-            <li>2D array data management</li>
-            <li>Visual UI feedback for inputs and validation</li>
-        </ul>
-
-        <h3>Growth Moment</h3>
-        <p>
-            After validating my initial logic, I researched the Backtracking algorithm,
-            understood it deeply, and translated it into clean, optimized C# code.
-        </p>
-
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/view" target="_blank">
-                ▶ Watch Gameplay
-            </a>
-        </div>
+<!-- ================= SNAKE ================= -->
+<div class="project">
+    <h3>🐍 Snake Game</h3>
+    <div class="tags">
+        <span class="tag">Architecture</span>
+        <span class="tag">Coroutines</span>
+        <span class="tag">Game Flow</span>
     </div>
 
-    <!-- VR -->
-    <div class="card">
-        <h2>🕶️ VR Interaction Prototype</h2>
-        <span class="badge">XR Toolkit</span>
-        <span class="badge">Physics</span>
-        <span class="badge">R&D</span>
+    <div class="project-content">
+        <div>
+            <p>
+                Built to strengthen understanding of
+                gameplay flow, coroutines, and clean architecture.
+            </p>
 
-        <h3>Overview</h3>
-        <p>
-            A VR interaction prototype built using Unity’s XR Interaction Toolkit,
-            focusing on physics-based interactions and scalable XR systems.
-        </p>
+            <ul>
+                <li>Singleton-based Game Manager</li>
+                <li>Coroutine-driven update flow</li>
+                <li>Delegate-based communication</li>
+            </ul>
 
-        <h3>Key Systems</h3>
-        <ul>
-            <li>XR Interaction Toolkit setup</li>
-            <li>Velocity & kinematic grab interactions</li>
-            <li>Continuous Dynamic collision detection</li>
-            <li>XR Device Simulator for hardware-free testing</li>
-        </ul>
+            <p>
+                Learned when coroutines are better than <code>Update()</code>.
+            </p>
 
-        <h3>Key Learning</h3>
-        <p>
-            Researching tooling can remove hardware dependency and unblock development early.
-        </p>
+            <div class="buttons">
+                <a href="https://github.com/NikhilChaudhary285/SnakeGame"
+                    class="btn"
+                    target="_blank">
+                    GitHub
+                </a>
 
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/view" target="_blank">
-                ▶ Watch Gameplay
-            </a>
+                <a href="https://drive.google.com/file/d/1yCiS07_-4VxVl1l8VBO8_YTlKFVZ_5rm/view"
+                   class="btn secondary" target="_blank">▶ Gameplay Video</a>
+            </div>
+        </div>
+
+        <div>
+            <iframe src="https://drive.google.com/file/d/1yCiS07_-4VxVl1l8VBO8_YTlKFVZ_5rm/preview"
+                    allowfullscreen loading="lazy"></iframe>
         </div>
     </div>
+</div>
 
-</section>
+<!-- ================= SUDOKU ================= -->
+<div class="project">
+    <h3>🧩 Sudoku</h3>
+    <div class="tags">
+        <span class="tag">Algorithms</span>
+        <span class="tag">Backtracking</span>
+        <span class="tag">Logic</span>
+    </div>
+
+    <div class="project-content">
+        <div>
+            <p>
+                Logic-heavy Sudoku game implementing
+                <strong>Backtracking algorithm</strong>.
+            </p>
+
+            <ul>
+                <li>Procedural puzzle generation</li>
+                <li>Solver algorithm</li>
+                <li>Data structure optimization</li>
+            </ul>
+
+            <div class="buttons">
+                <a href="https://github.com/NikhilChaudhary285/SudokuGame"
+                    class="btn"
+                    target="_blank">
+                    GitHub
+                </a>
+
+                <a href="https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/view"
+                   class="btn secondary" target="_blank">▶ Gameplay Video</a>
+            </div>
+        </div>
+
+        <div>
+            <iframe src="https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/preview"
+                    allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- ================= VR ================= -->
+<div class="project">
+    <h3>🕶️ VR Interaction Prototype</h3>
+    <div class="tags">
+        <span class="tag">XR Toolkit</span>
+        <span class="tag">Physics</span>
+        <span class="tag">R&D</span>
+    </div>
+
+    <div class="project-content">
+        <div>
+            <p>
+                VR prototype using Unity XR Toolkit,
+                focusing on physics-driven interactions.
+            </p>
+
+            <ul>
+                <li>XR Interaction Toolkit</li>
+                <li>Physics-based grabbing</li>
+                <li>XR Device Simulator testing</li>
+            </ul>
+
+            <div class="buttons">
+                <a href="https://github.com/NikhilChaudhary285/VR-Interaction-Prototype---XR"
+                    class="btn"
+                    target="_blank">
+                    GitHub
+                </a>
+
+                <a href="https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/view"
+                   class="btn secondary" target="_blank">▶ Gameplay Video</a>
+            </div>
+        </div>
+
+        <div>
+            <iframe src="https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/preview"
+                    allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+</div>
 
 <footer>
     © 2025 Nikhil Chaudhary · Unity Game Developer · Systems & Architecture

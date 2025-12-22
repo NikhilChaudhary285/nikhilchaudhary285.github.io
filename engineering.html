@@ -1,286 +1,233 @@
-<!-- # Architecture, Multiplayer, Optimization -->
- <!DOCTYPE html>
+<!-- ================= ENGINEERING ================= -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Engineering | Nikhil Chaudhary</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- SEO -->
+    <meta name="description" content="Engineering philosophy, multiplayer architecture, optimization mindset, and system design by Unity Multiplayer Game Developer Nikhil Chaudhary." />
+    <meta name="author" content="Nikhil Chaudhary" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
-        }
-
-        header {
-            padding: 20px 60px;
-            background: #020617;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            color: #38bdf8;
-            font-size: 22px;
-        }
-
-        nav a {
-            color: #cbd5f5;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        h2 {
-            color: #38bdf8;
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            color: #7dd3fc;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #d1d5db;
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-
-        .card {
-            background: #020617;
-            border-radius: 14px;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 8px;
-        }
-
-        .highlight {
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
-        .pill {
-            display: inline-block;
-            background: #1e293b;
-            color: #38bdf8;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-right: 8px;
-            margin-top: 6px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-            margin-top: 80px;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-<header>
-    <h1>Nikhil Chaudhary</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Journey</a>
-        <a href="projects.html">Projects</a>
-        <a href="engineering.html">Engineering</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            <a href="index.html"><span>Nikhil Chaudhary</span></a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="engineering.html" class="nav-cta active">Engineering</a></li>
+            <li><a href="case-study/foundation-projects.html">Foundation</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="hero">
+    <div class="container">
+        <h1>Engineering Philosophy</h1>
+        <p class="hero-description">
+            How I design <strong>scalable multiplayer systems</strong>,
+            write <strong>maintainable Unity architecture</strong>,
+            and optimize games for <strong>real-world production</strong>.
+        </p>
+    </div>
 </header>
 
-<div class="container">
-
-    <h2>Engineering Philosophy & Architecture</h2>
+<!-- ================= INTRO ================= -->
+<section>
     <p>
-        This page represents <span class="highlight">how I think as an engineer</span> —
-        from architecture decisions to multiplayer synchronization, optimization,
-        and scalable systems design in Unity.
+        I approach Unity development as <strong>software engineering</strong>,
+        not just game scripting.
+        Every system I build is designed to be
+        <strong>understandable, extendable, and production-ready</strong>.
+    </p>
+</section>
+
+<!-- ================= ARCHITECTURE ================= -->
+<section>
+    <h3>1. Clean Architecture in Unity</h3>
+    <p>
+        I structure Unity projects around <strong>clear responsibility boundaries</strong>
+        instead of scene-driven logic.
     </p>
 
-    <!-- ================= ARCHITECTURE ================= -->
-    <div class="card">
-        <h3>1. Clean Architecture in Unity</h3>
-        <p>
-            I treat Unity projects as <strong>software systems</strong>, not just game scenes.
-            My architecture focuses on <span class="highlight">maintainability, scalability, and testability</span>.
-        </p>
+    <ul>
+        <li>Separation of UI, gameplay, networking, and data layers</li>
+        <li>MVP pattern for UI-heavy systems (menus, lobbies, HUDs)</li>
+        <li>ScriptableObjects for stats, configs, and reusable data</li>
+        <li>Singletons used intentionally (SessionManager, NetworkManager)</li>
+    </ul>
 
-        <ul>
-            <li>Separation of concerns between UI, gameplay, networking, and data layers</li>
-            <li>Use of <strong>MVP pattern</strong> for UI-heavy systems</li>
-            <li>ScriptableObjects for configuration, stats, and reusable data</li>
-            <li>Singletons only where lifecycle guarantees are required</li>
-        </ul>
+    <p>
+        This keeps systems testable, readable, and scalable as projects grow.
+    </p>
+</section>
 
-        <div>
-            <span class="pill">SOLID</span>
-            <span class="pill">MVP</span>
-            <span class="pill">OOP</span>
-            <span class="pill">Clean Architecture</span>
-        </div>
+<!-- ================= MULTIPLAYER ================= -->
+<section>
+    <h3>2. Multiplayer Architecture (Photon PUN & Socket.IO)</h3>
+
+    <p>
+        Multiplayer engineering is about <span class="highlight">state consistency</span>,
+        latency tolerance, and maintaining <span class="highlight">player trust</span>
+        across unreliable network conditions.
+    </p>
+
+    <p><strong>Core multiplayer systems I design and implement:</strong></p>
+    <ul>
+        <li>Room-based architecture with dynamic player counts (1–4 players)</li>
+        <li>Player-ready state synchronization before gameplay begins</li>
+        <li>Master-client authority where deterministic control is required</li>
+        <li>Scene synchronization using <strong>AutomaticallySyncScene</strong></li>
+    </ul>
+
+    <p>
+        For real-time game state consistency, I prefer
+        <strong>Photon Custom Room Properties</strong> and
+        <strong>RaiseEvent</strong> for deterministic synchronization,
+        intentionally avoiding excessive RPC usage to reduce network noise.
+    </p>
+
+    <p>
+        Alongside Photon, I also work with <span class="highlight">Socket.IO</span>
+        for backend-driven real-time systems such as:
+    </p>
+
+    <ul>
+        <li>Player presence, session tracking, and server-side events</li>
+        <li>Lobby-level messaging and non-gameplay real-time updates</li>
+        <li>Secure client–server communication using event-based architecture</li>
+    </ul>
+
+    <p>
+        This hybrid approach allows me to separate
+        <span class="highlight">gameplay synchronization</span>
+        from <span class="highlight">backend communication</span>,
+        resulting in cleaner architecture and better scalability.
+    </p>
+
+    <div>
+        <span class="pill"> • Photon PUN • </span>
+        <span class="pill">Socket.IO • </span>
+        <span class="pill">Room Properties • </span>
+        <span class="pill">RaiseEvent • </span>
+        <span class="pill">Real-Time Systems</span>
     </div>
+</section>
 
-    <!-- ================= MULTIPLAYER ================= -->
-    <div class="card">
-        <h3>2. Multiplayer Systems (Photon PUN)</h3>
-        <p>
-            Multiplayer engineering is about <span class="highlight">state consistency</span>,
-            latency handling, and player experience under unreliable networks.
-        </p>
 
-        <p><strong>Core systems I implemented:</strong></p>
-        <ul>
-            <li>Room-based matchmaking with dynamic player counts (1–4 players)</li>
-            <li>Player ready-state synchronization before game start</li>
-            <li>Master-client authoritative flow where applicable</li>
-            <li>Scene synchronization using <strong>AutomaticallySyncScene</strong></li>
-        </ul>
+<!-- ================= AI ================= -->
+<section>
+    <h3>3. Modular AI Systems</h3>
+    <p>
+        Enemy behavior is built using a <strong>State + Strategy architecture</strong>
+        instead of monolithic Update loops.
+    </p>
 
-        <p>
-            I prefer <strong>Photon Custom Properties</strong> and <strong>RaiseEvent</strong>
-            for deterministic state synchronization instead of overusing RPCs.
-        </p>
+    <ul>
+        <li>State Machine: Idle, Move, Attack, Dead</li>
+        <li>Strategy pattern for movement and targeting logic</li>
+        <li>ScriptableObject-driven enemy stats and tuning</li>
+        <li>Object pooling for enemies, bullets, and visual effects (VFX)</li>
+    </ul>
 
-        <div>
-            <span class="pill">Photon PUN</span>
-            <span class="pill">Room Properties</span>
-            <span class="pill">RaiseEvent</span>
-            <span class="pill">Sync Scene</span>
-        </div>
+    <p>
+        This allows new enemy types without modifying existing core logic.
+    </p>
+</section>
+
+<!-- ================= OPTIMIZATION ================= -->
+<section>
+    <h3>4. Performance & Optimization Mindset</h3>
+    <p>
+        Optimization is planned <strong>from day one</strong>,
+        not treated as a late-stage fix.
+    </p>
+
+    <ul>
+        <li>Object pooling to reduce runtime allocations</li>
+        <li>Network data size reduction & compact serialization</li>
+        <li>Layer Collision Matrix instead of manual collision checks</li>
+        <li>Profiling CPU, GC, memory, and network traffic regularly</li>
+    </ul>
+
+    <p>
+        All optimization decisions are based on measurements,
+        not assumptions.
+    </p>
+</section>
+
+<!-- ================= BACKEND ================= -->
+<section>
+    <h3>5. Backend & Data Flow</h3>
+    <p>
+        I integrate backend systems to support
+        <strong>real production requirements</strong>.
+    </p>
+
+    <ul>
+        <li>Node.js + Express REST APIs</li>
+        <li>MongoDB for persistent game data</li>
+        <li>Firebase authentication & cloud services</li>
+        <li>Secure UnityWebRequest-based communication</li>
+    </ul>
+
+    <p>
+        Client-server data contracts are designed carefully
+        to ensure version compatibility and stability.
+    </p>
+</section>
+
+<!-- ================= THINKING ================= -->
+<section>
+    <h3>6. How I Think as an Engineer</h3>
+    <ul>
+        <li>Build systems that are easy to extend, not just finish</li>
+        <li>Prefer clarity and correctness over clever shortcuts</li>
+        <li>Optimize based on data, not intuition</li>
+        <li>Write code juniors can learn from and seniors can trust</li>
+    </ul>
+
+    <p>
+        My long-term goal is to grow into a
+        <strong>game systems architect</strong>
+        building multiplayer games that scale technically and creatively.
+    </p>
+</section>
+
+<!-- ================= CTA ================= -->
+<section>
+    <div style="text-align:center;">
+        <a href="projects.html" class="btn primary">See Engineering in Action</a>
+        <a href="contact.html" class="btn secondary">Let’s Talk</a>
     </div>
+</section>
 
-    <!-- ================= AI ================= -->
-    <div class="card">
-        <h3>3. AI Architecture (State & Strategy)</h3>
-        <p>
-            Enemy behavior is implemented using a <span class="highlight">modular AI system</span>
-            rather than monolithic Update logic.
-        </p>
-
-        <ul>
-            <li>State Machine: Idle, Move, Attack, Dead</li>
-            <li>Strategy Pattern for movement & targeting behaviors</li>
-            <li>ScriptableObject-based enemy stats and configurations</li>
-            <li>Object pooling for enemies and bullets</li>
-        </ul>
-
-        <p>
-            This allows new enemy types to be created without modifying core logic.
-        </p>
-
-        <div>
-            <span class="pill">State Pattern</span>
-            <span class="pill">Strategy Pattern</span>
-            <span class="pill">AI Design</span>
-        </div>
-    </div>
-
-    <!-- ================= OPTIMIZATION ================= -->
-    <div class="card">
-        <h3>4. Performance & Optimization Mindset</h3>
-        <p>
-            Performance optimization is considered <span class="highlight">from day one</span>,
-            not as a post-production fix.
-        </p>
-
-        <ul>
-            <li>Layer Collision Matrix instead of manual collision checks</li>
-            <li>Network data size reduction and compact serialization</li>
-            <li>Texture offset scrolling instead of repeated environment spawning</li>
-            <li>Pooling to avoid runtime allocations</li>
-        </ul>
-
-        <p>
-            I actively profile CPU, GC, memory, and network traffic during development.
-        </p>
-
-        <div>
-            <span class="pill">Optimization</span>
-            <span class="pill">Profiler</span>
-            <span class="pill">GC Control</span>
-        </div>
-    </div>
-
-    <!-- ================= BACKEND ================= -->
-    <div class="card">
-        <h3>5. Backend & Data Flow</h3>
-        <p>
-            I design backend systems to support <span class="highlight">real production needs</span>
-            such as persistence, authentication, and scalability.
-        </p>
-
-        <ul>
-            <li>Node.js + Express REST APIs</li>
-            <li>MongoDB for structured game data storage</li>
-            <li>Firebase for authentication and cloud services</li>
-            <li>Secure UnityWebRequest integration</li>
-        </ul>
-
-        <p>
-            Game data is serialized carefully to maintain compatibility
-            between client and server versions.
-        </p>
-
-        <div>
-            <span class="pill">Node.js</span>
-            <span class="pill">MongoDB</span>
-            <span class="pill">Firebase</span>
-            <span class="pill">REST APIs</span>
-        </div>
-    </div>
-
-    <!-- ================= THINKING ================= -->
-    <div class="card">
-        <h3>6. How I Think as an Engineer</h3>
-        <ul>
-            <li>Build systems that are easy to extend, not just easy to finish</li>
-            <li>Prefer clarity and correctness over clever shortcuts</li>
-            <li>Optimize based on measurements, not assumptions</li>
-            <li>Write code juniors can understand and seniors can respect</li>
-        </ul>
-
-        <p>
-            My long-term goal is to grow into a <span class="highlight">game systems architect</span>
-            who designs multiplayer games that scale technically and creatively.
-        </p>
-    </div>
-
-</div>
-
+<!-- ================= FOOTER ================= -->
 <footer>
     © 2025 Nikhil Chaudhary | Engineering & Architecture
 </footer>
 
+<!-- JS -->
+<script src="js/main.js"></script>
 </body>
 </html>

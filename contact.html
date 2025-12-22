@@ -1,176 +1,117 @@
-<!-- # Contact Info -->
+<!-- ================= CONTACT ================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Nikhil Chaudhary</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- SEO -->
+    <meta name="description" content="Contact Nikhil Chaudhary – Multiplayer Unity Game Developer. Open to collaboration, hiring, and technical discussions." />
+    <meta name="author" content="Nikhil Chaudhary" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
-        }
-
-        header {
-            padding: 20px 60px;
-            background: #020617;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            color: #38bdf8;
-            font-size: 22px;
-        }
-
-        nav a {
-            color: #cbd5f5;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #38bdf8;
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            color: #d1d5db;
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .contact-card {
-            background: #020617;
-            border-radius: 16px;
-            padding: 40px;
-            margin-top: 40px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.35);
-        }
-
-        .contact-item {
-            margin-bottom: 25px;
-        }
-
-        .contact-item h3 {
-            color: #7dd3fc;
-            margin-bottom: 6px;
-            font-size: 18px;
-        }
-
-        .contact-item a {
-            color: #e5e7eb;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .contact-item a:hover {
-            color: #38bdf8;
-        }
-
-        .cta {
-            margin-top: 40px;
-        }
-
-        .cta p {
-            font-size: 15px;
-            color: #94a3b8;
-        }
-
-        footer {
-            margin-top: 90px;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-            text-align: center;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-<header>
-    <h1>Nikhil Chaudhary</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Journey</a>
-        <a href="projects.html">Projects</a>
-        <a href="engineering.html">Engineering</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            <a href="index.html"><span>Nikhil Chaudhary</span></a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="case-study/foundation-projects.html">Foundation</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="hero">
+    <div class="container">
+        <h1>Let’s Connect</h1>
+        <p class="hero-description">
+            Open to collaboration, hiring opportunities,
+            and deep technical discussions around
+            <strong>game development & multiplayer systems</strong>.
+        </p>
+    </div>
 </header>
 
-<div class="container">
-
-    <h2>Let’s Connect</h2>
-    <p>
-        I’m always open to discussing game development, multiplayer systems,
-        engineering challenges, or new opportunities.
-        <br/>Feel free to reach out — I usually reply within 24 hours.
-    </p>
-
+<!-- ================= CONTACT CONTENT ================= -->
+<section>
     <div class="contact-card">
 
         <div class="contact-item">
             <h3>Email</h3>
-            <a href="mailto:nikhilchaudhary285@gmail.com">
-                nikhilchaudhary285@gmail.com
-            </a>
+            <p>
+                <a href="mailto:nikhilchaudhary285@gmail.com">
+                    nikhilchaudhary285@gmail.com
+                </a>
+            </p>
         </div>
 
         <div class="contact-item">
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/nikhilchaudhary285" target="_blank">
-                linkedin.com/in/nikhilchaudhary285
-            </a>
+            <p>
+                <a href="https://www.linkedin.com/in/nikhilchaudhary285" target="_blank">
+                    linkedin.com/in/nikhilchaudhary285
+                </a>
+            </p>
         </div>
 
         <div class="contact-item">
             <h3>GitHub</h3>
-            <a href="https://github.com/NikhilChaudhary285" target="_blank">
-                github.com/nikhilchaudhary
-            </a>
+            <p>
+                <a href="https://github.com/NikhilChaudhary285" target="_blank">
+                    github.com/NikhilChaudhary285
+                </a>
+            </p>
         </div>
 
         <div class="contact-item">
             <h3>Location</h3>
-            <p>India (Open to Remote Opportunities)</p>
+            <p>🌍 Based in India • Open to Global Opportunities</p>
         </div>
 
     </div>
+</section>
 
-    <div class="cta">
-        <p>
-            Interested in collaboration, hiring, or technical discussion?  
-            Let’s build something impactful.
-        </p>
+<!-- ================= CTA ================= -->
+<section>
+    <p style="text-align:center; color:#94a3b8;">
+        Interested in collaboration, hiring,
+        or engineering discussions?
+        <br />
+        I usually respond within <strong>24 hours</strong>.
+    </p>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="projects.html" class="btn primary">View My Work</a>
+        <a href="resume.html" class="btn secondary">View Resume</a>
     </div>
+</section>
 
-</div>
-
+<!-- ================= FOOTER ================= -->
 <footer>
     © 2025 Nikhil Chaudhary | Contact & Collaboration
 </footer>
 
+<!-- JS -->
+<script src="js/main.js"></script>
 </body>
 </html>

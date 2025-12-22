@@ -1,203 +1,195 @@
-<!-- # Journey (Phase 1 → Phase 3) -->
- <!DOCTYPE html>
+<!-- ================= ABOUT / JOURNEY ================= -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About Me | Nikhil Chaudhary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journey | Nikhil Chaudhary</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- SEO -->
+    <meta name="description" content="Professional journey of a Multiplayer Unity Game Developer focused on scalable systems, clean architecture, and production engineering." />
+    <meta name="author" content="Nikhil Chaudhary" />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
-            line-height: 1.7;
-        }
-
-        header {
-            padding: 20px 60px;
-            background: #020617;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            color: #38bdf8;
-            font-size: 22px;
-        }
-
-        nav a {
-            color: #cbd5f5;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 15px;
-            font-size: 28px;
-        }
-
-        h3 {
-            color: #7dd3fc;
-            margin-top: 40px;
-        }
-
-        p {
-            color: #d1d5db;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
-        .timeline {
-            margin-top: 30px;
-            border-left: 3px solid #38bdf8;
-            padding-left: 25px;
-        }
-
-        .timeline-item {
-            margin-bottom: 30px;
-        }
-
-        .timeline-item span {
-            font-size: 14px;
-            color: #94a3b8;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #020617;
-            color: #94a3b8;
-            margin-top: 60px;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-<header>
-    <h1>Nikhil Chaudhary</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Journey</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            <a href="index.html"><span>Nikhil Chaudhary</span></a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="case-study/foundation-projects.html">Foundation</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<header class="hero">
+    <div class="container">
+        <h1>My Professional Journey</h1>
+        <p class="hero-description">
+            From gameplay fundamentals to building
+            <strong>scalable multiplayer systems</strong>
+            used in real-world production.
+        </p>
+    </div>
 </header>
 
-<div class="container">
-
-    <h2>My Journey</h2>
+<!-- ================= INTRO ================= -->
+<section>
     <p>
-        Hi, I’m <span class="highlight">Nikhil Chaudhary</span>, a 
-        <span class="highlight">Multiplayer Unity Game Developer</span> with 2+ years of experience building 
-        games for <span class="highlight">Android, WebGL, and Windows</span>.
+        Hi, I’m <strong>Nikhil Chaudhary</strong>, a
+        <strong>Multiplayer Unity Game Developer</strong>
+        with 2+ years of professional experience building games for
+        <strong>Android, iOS, WebGL, and Windows</strong>.
     </p>
 
     <p>
-        My journey started with curiosity about how games work behind the scenes — 
-        not just visuals, but systems, logic, networking, and performance.
-        Over time, this curiosity evolved into a deep passion for 
-        <span class="highlight">clean architecture, scalable multiplayer systems, and polished gameplay experiences</span>.
+        I don’t just focus on making games work —
+        I focus on designing <strong>systems that scale</strong>,
+        remain maintainable, and perform reliably
+        under real-world multiplayer conditions.
     </p>
+</section>
 
-    <h3>How I Started</h3>
-    <p>
-        I began my development journey by learning <span class="highlight">C# and Unity</span>,
-        building small single-player prototypes and gameplay mechanics.
-        Very soon, I realized that writing code that simply “works” is not enough —
-        it needs to be <span class="highlight">maintainable, testable, and scalable</span>.
-    </p>
+<!-- ================= PHASE 1 ================= -->
+<section>
+    <h3>Phase 1 — Foundations & Systems Thinking</h3>
 
-    <h3>Transition into Multiplayer & Backend</h3>
     <p>
-        To challenge myself further, I moved into multiplayer game development using
-        <span class="highlight">Photon PUN</span>, real-time synchronization, room-based architecture,
-        and player state management.
+        My journey began with learning <strong>C# and Unity</strong>,
+        building small gameplay prototypes, UI systems,
+        and single-player mechanics.
     </p>
 
     <p>
-        Alongside this, I integrated backend systems using 
-        <span class="highlight">Firebase, Node.js, Express.js, and MongoDB</span>
-        for player data, progression, and cloud storage.
+        Very early on, I realized that code quality matters more than
+        quick results. This led me to focus on
+        <strong>clean architecture, modular design, and reusability</strong>
+        instead of tightly coupled logic.
     </p>
 
-    <h3>What I Focus On Today</h3>
     <ul>
-        <li>✔ Multiplayer gameplay architecture (Photon PUN / room-based systems)</li>
-        <li>✔ Clean architecture patterns (MVP, State Machine, Strategy, Singleton)</li>
-        <li>✔ Modular AI systems & scalable enemy behaviors</li>
-        <li>✔ Backend-integrated game data systems</li>
-        <li>✔ Performance optimization & network data optimization</li>
-        <li>✔ Polished UI/UX for game menus and lobbies</li>
+        <li>Gameplay mechanics & player controllers</li>
+        <li>UI systems and menu flows</li>
+        <li>ScriptableObjects for data-driven design</li>
+        <li>State Machines & Strategy patterns</li>
     </ul>
+</section>
 
-    <h3>My Development Timeline</h3>
-    <div class="timeline">
-        <div class="timeline-item">
-            <span>Phase 1</span>
-            <p>Learned Unity & C# fundamentals, gameplay mechanics, and basic UI systems.</p>
-        </div>
-        <div class="timeline-item">
-            <span>Phase 2</span>
-            <p>Built single-player games and AI-driven systems using State & Strategy patterns.</p>
-        </div>
-        <div class="timeline-item">
-            <span>Phase 3</span>
-            <p>Moved into multiplayer using Photon PUN, lobbies, rooms, ready systems, and synced gameplay.</p>
-        </div>
-        <div class="timeline-item">
-            <span>Phase 4</span>
-            <p>Integrated backend services using Firebase, Node.js, MongoDB for real-world scalability.</p>
-        </div>
-    </div>
+<!-- ================= PHASE 2 ================= -->
+<section>
+    <h3>Phase 2 — Multiplayer & Architecture</h3>
 
-    <h3>My Goal</h3>
     <p>
-        My goal is to become a <span class="highlight">high-impact game engineer</span>
-        who not only builds games, but also designs systems that can scale,
-        be maintained by teams, and be taught to junior developers.
+        To push beyond single-player limitations,
+        I transitioned into <strong>multiplayer game development</strong>.
+        This introduced real engineering challenges —
+        synchronization, latency, authority, and consistency.
     </p>
 
     <p>
-        I strongly believe in <span class="highlight">learning deeply, building cleanly,
-        and sharing knowledge</span>.
+        I worked extensively with <strong>Photon (PUN)</strong> and
+        <strong>Socket.IO</strong>, designing room-based systems,
+        matchmaking flows, and player-ready synchronization.
     </p>
 
-</div>
+    <ul>
+        <li>Room creation & matchmaking systems</li>
+        <li>Player-ready & scene synchronization</li>
+        <li>Authoritative vs client-driven logic</li>
+        <li>Network data optimization</li>
+        <li>Reconnect-safe multiplayer flows</li>
+    </ul>
+</section>
 
+<!-- ================= PHASE 3 ================= -->
+<section>
+    <h3>Phase 3 — Production Engineering & Scale</h3>
+
+    <p>
+        My focus evolved further when working on
+        <strong>live production games with millions of users</strong>.
+        At this stage, stability and performance
+        mattered more than features.
+    </p>
+
+    <p>
+        I contributed to production-ready systems by improving
+        gameplay stability, optimizing UI for multiple devices,
+        and ensuring systems could be maintained by teams.
+    </p>
+
+    <ul>
+        <li>Performance optimization (mobile & WebGL)</li>
+        <li>Memory management & object pooling</li>
+        <li>Backend integration (Firebase, Node.js, MongoDB)</li>
+        <li>Data persistence & player progression</li>
+        <li>Production debugging & live issue resolution</li>
+    </ul>
+</section>
+
+<!-- ================= ENGINEERING PHILOSOPHY ================= -->
+<section>
+    <h3>My Engineering Mindset</h3>
+
+    <p>
+        I approach game development as an
+        <strong>engineering discipline</strong>, not just creative coding.
+    </p>
+
+    <ul>
+        <li>Design systems that other developers can understand</li>
+        <li>Write code that survives feature growth</li>
+        <li>Prioritize performance and stability early</li>
+        <li>Build multiplayer systems that fail gracefully</li>
+        <li>Document and structure code for team scalability</li>
+    </ul>
+</section>
+
+<!-- ================= GOAL ================= -->
+<section>
+    <h3>Looking Forward</h3>
+
+    <p>
+        My goal is to grow into a
+        <strong>high-impact game engineer</strong>
+        who builds systems that scale,
+        mentors other developers,
+        and contributes to long-term product success.
+    </p>
+
+    <p>
+        I believe in <strong>deep learning, clean systems,
+        and practical engineering</strong> over shortcuts.
+    </p>
+
+    <a href="projects.html" class="btn primary">View My Projects</a>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-    © 2025 Nikhil Chaudhary | Unity Multiplayer Game Developer
+    © 2025 Nikhil Chaudhary | Multiplayer Unity Game Developer
 </footer>
 
+<!-- JS -->
+<script src="js/main.js"></script>
 </body>
 </html>

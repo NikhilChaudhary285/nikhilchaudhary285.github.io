@@ -1,96 +1,109 @@
 <!-- # Fourth Project -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>City Builder Resource Management Game | Nikhil Chaudhary</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>City Builder | Case Study</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a;
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
             color: #e5e7eb;
-            line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(135deg, #020617, #1e293b);
-            padding: 60px 20px;
-            text-align: center;
+            padding: 20px 60px;
+            background: #020617;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+        nav a {
+            color: #cbd5f5;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
             color: #38bdf8;
         }
 
-        header p {
-            font-size: 18px;
-            color: #cbd5f5;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        section {
-            max-width: 1100px;
+        .container {
+            max-width: 1000px;
             margin: auto;
             padding: 60px 20px;
         }
 
         h2 {
             color: #38bdf8;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
             margin-bottom: 10px;
         }
 
-        .card {
-            background: #020617;
-            border-radius: 14px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        h3 {
+            color: #7dd3fc;
+            margin-top: 30px;
         }
 
-        .tech span {
-            display: inline-block;
-            background: #1e293b;
-            padding: 8px 14px;
-            margin: 6px;
-            border-radius: 20px;
+        p, li {
+            color: #d1d5db;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        .hero {
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: #94a3b8;
             font-size: 14px;
+            margin-bottom: 20px;
         }
 
-        .links a {
+        .badge {
             display: inline-block;
-            margin-right: 15px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #020617;
-            background: #38bdf8;
-            padding: 10px 18px;
-            border-radius: 6px;
-            font-weight: bold;
+            background: #020617;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px 5px 0 0;
+            font-size: 13px;
+            color: #cbd5f5;
         }
 
-        .links a:hover {
-            background: #0ea5e9;
+        .impact {
+            background: #020617;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
         }
 
         footer {
-            text-align: center;
-            padding: 30px;
+            margin-top: 80px;
+            padding: 25px;
             background: #020617;
             color: #94a3b8;
+            text-align: center;
         }
     </style>
 </head>
@@ -98,103 +111,145 @@
 <body>
 
 <header>
-    <h1>City Builder Resource Management Game</h1>
-    <p>
-        A scalable city-building and resource management game developed in Unity,
-        focusing on performance, modular architecture, and persistent player data.
-    </p>
+    <h1>Nikhil Chaudhary</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../engineering.html">Engineering</a>
+        <a href="foundation-projects.html">Foundation</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
 </header>
 
-<section>
+<div class="container">
 
-    <div class="card">
-        <h2>📌 Project Overview</h2>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>City Builder – Resource Management Game</h1>
+        <p class="meta">
+            Simulation • WebGL & Android • Economy Systems • Progression Design
+        </p>
+
+        <span class="badge">Unity</span>
+        <span class="badge">Simulation</span>
+        <span class="badge">Resource Economy</span>
+        <span class="badge">Progression Systems</span>
+        <span class="badge">Cross-Platform</span>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section>
+        <h2>Project Overview</h2>
         <p>
-            This project is a <strong>city-builder and resource management game</strong>
-            where players collect, consume, and manage resources to expand their town.
+            <strong>City Builder</strong> is a resource management and simulation game
+            focused on long-term progression, economy balance, and scalable gameplay systems.
+            The game was developed to run on both <strong>WebGL and Android</strong>.
         </p>
         <p>
-            The primary focus was to design <strong>scalable gameplay systems</strong>,
-            optimize performance for <strong>WebGL and Android</strong>,
-            and integrate a backend for <strong>persistent player progression</strong>.
+            The primary goal of this project was to design reusable and extendable systems
+            for buildings, resources, and progression rather than one-off gameplay mechanics.
         </p>
-    </div>
+    </section>
 
-    <div class="card">
-        <h2>👨‍💻 My Role & Responsibilities</h2>
+    <!-- ROLE -->
+    <section>
+        <h2>My Role & Responsibilities</h2>
         <ul>
-            <li>Designed and implemented resource collection and consumption systems</li>
-            <li>Developed building construction, upgrade, and progression mechanics</li>
-            <li>Created a modular and maintainable gameplay architecture</li>
-            <li>Implemented object pooling for gameplay entities and resources</li>
-            <li>Integrated backend APIs for player data synchronization</li>
-            <li>Optimized performance for both WebGL and mobile platforms</li>
-            <li>Collaborated with backend developers for data validation and flow</li>
+            <li>Designed core city-building and resource economy systems</li>
+            <li>Implemented building placement and upgrade mechanics</li>
+            <li>Created scalable progression and unlock systems</li>
+            <li>Balanced resource generation and consumption loops</li>
+            <li>Optimized simulation performance for WebGL and mobile</li>
+            <li>Ensured cross-platform compatibility and stable frame rates</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="card">
-        <h2>🧠 Core Gameplay & Engineering Systems</h2>
+    <!-- ENGINEERING -->
+    <section>
+        <h2>Engineering & System Design</h2>
+
+        <h3>Resource Economy Architecture</h3>
+        <p>
+            The game uses a centralized resource manager that controls
+            generation, storage, and consumption of all resources.
+        </p>
         <ul>
-            <li>Resource Collection & Consumption System</li>
-            <li>City Building & Upgrade System</li>
-            <li>Persistent Player Progression</li>
-            <li>Backend Data Synchronization</li>
-            <li>Object Pooling for interactive entities</li>
-            <li>Modular Gameplay Architecture</li>
+            <li>Single source of truth for resource data</li>
+            <li>Event-driven updates to UI and gameplay systems</li>
+            <li>Easy addition of new resource types</li>
         </ul>
-    </div>
 
-    <div class="card">
-        <h2>🚧 Challenges & Solutions</h2>
+        <h3>Building & Progression Systems</h3>
+        <p>
+            Buildings were designed as modular entities with upgrade tiers,
+            allowing scalable expansion without refactoring core systems.
+        </p>
         <ul>
-            <li>
-                <strong>Challenge:</strong> Performance drops due to frequent object instantiation  
-                <br>
-                <strong>Solution:</strong> Implemented object pooling to reduce allocations and GC spikes.
-            </li>
-            <li>
-                <strong>Challenge:</strong> Scaling gameplay systems as complexity increased  
-                <br>
-                <strong>Solution:</strong> Designed modular systems with clear separation of responsibilities.
-            </li>
-            <li>
-                <strong>Challenge:</strong> Syncing Unity gameplay with external backend  
-                <br>
-                <strong>Solution:</strong> Integrated Node.js APIs with MongoDB for persistent player data.
-            </li>
+            <li>ScriptableObject-driven building data</li>
+            <li>Upgradeable production and capacity values</li>
+            <li>Progression-based unlock flow</li>
         </ul>
-    </div>
 
-    <div class="card">
-        <h2>🧰 Tech Stack</h2>
-        <div class="tech">
-            <span>Unity (C#)</span>
-            <span>WebGL</span>
-            <span>Android</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-            <span>Object Pooling</span>
-            <span>Modular Architecture</span>
-            <span>Backend Integration</span>
-            <span>Git</span>
-        </div>
-    </div>
+        <h3>Cross-Platform Optimization</h3>
+        <p>
+            Special attention was given to performance constraints
+            of WebGL and low-end mobile devices.
+        </p>
+        <ul>
+            <li>Reduced per-frame calculations</li>
+            <li>Cached frequently accessed data</li>
+            <li>Optimized UI redraws and simulation ticks</li>
+        </ul>
+    </section>
 
-    <div class="card">
-        <h2>🎥 Media</h2>
-        <p>Gameplay demonstration:</p>
-        <div class="links">
-            <a href="https://drive.google.com/file/d/1OiCZiFMJrmvgT7rq6hSBsdjcRFMpFrKg/view?usp=sharing" target="_blank">
-                ▶ Watch Gameplay Video
-            </a>
-        </div>
-    </div>
+    <!-- CHALLENGES -->
+    <section>
+        <h2>Challenges & Solutions</h2>
 
-</section>
+        <h3>Challenge: Preventing economy imbalance</h3>
+        <p>
+            Early versions allowed players to snowball resources too quickly,
+            breaking progression pacing.
+        </p>
+
+        <p>
+            <strong>Solution:</strong> Introduced production caps, upgrade costs,
+            and exponential scaling to maintain long-term balance.
+        </p>
+
+        <h3>Challenge: Performance on WebGL</h3>
+        <p>
+            <strong>Solution:</strong> Reduced simulation frequency and avoided
+            unnecessary allocations to maintain smooth performance.
+        </p>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="impact">
+        <h2>Impact & Results</h2>
+        <ul>
+            <li>Stable and scalable city-building gameplay loop</li>
+            <li>Reusable systems suitable for future simulation games</li>
+            <li>Balanced progression that encourages long-term play</li>
+            <li>Smooth performance across WebGL and Android</li>
+        </ul>
+    </section>
+
+    <!-- MEDIA -->
+    <section>
+        <h2>Gameplay</h2>
+        <p>
+            🎥 <a href="https://drive.google.com/file/d/1OiCZiFMJrmvgT7rq6hSBsdjcRFMpFrKg/view?usp=sharing" target="_blank">
+            Gameplay Video</a>
+        </p>
+    </section>
+
+</div>
 
 <footer>
-    © 2025 Nikhil Chaudhary · Unity Game Developer · Gameplay & Backend Systems
+    © 2025 Nikhil Chaudhary | City Builder Case Study
 </footer>
 
 </body>
