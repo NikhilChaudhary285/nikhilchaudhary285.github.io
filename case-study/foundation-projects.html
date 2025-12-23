@@ -9,13 +9,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
+        /* ---------- GLOBAL ---------- */
+        * {
+        box-sizing: border-box;
         }
 
+        body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: #0f172a;
+        z-index: 1000;
+        box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-container {
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 15px 15px; /* UPDATED: slightly slimmer */
+        }
+        
+        .nav-logo a {
+        font-size: 1.4rem; /* UPDATED: balanced logo size */
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+        }
+
+        .nav-logo span {
+        color: #38bdf8;
+        }
+
+        /* ---------- NAV LINKS ---------- */
+        .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 1.4rem; /* UPDATED */
+        padding: 0;
+        margin: 0;
+        }
+
+        .nav-links a {
+        color: #cbd5f5;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem; /* UPDATED: cross-platform readable */
+        padding: 0.25rem 0.15rem;
+        transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+        color: #38bdf8;
+        }
+
+        /* ---------- LIST ---------- */
+        .nav-links ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .nav-links li {
+        background: #020617;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid #1e293b;
+        }
+
+        /* ---------- TOGGLE ---------- */
+        .nav-toggle {
+        display: none;
+        font-size: 1.5rem;
+        color: #ffffff;
+        cursor: pointer;
+        background: none;
+        border: none;
+        }
+
+        /* ---------- HEADER ---------- */
         header {
             padding: 50px 20px;
             background: #020617;
@@ -24,24 +109,29 @@
 
         header h1 {
             color: #38bdf8;
+            font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
             font-size: 36px;
             margin-bottom: 10px;
         }
 
         header p {
             color: #cbd5f5;
+            font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
             max-width: 900px;
             margin: auto;
+            
         }
 
         .container {
-            max-width: 1150px;
+            max-width: 1100px;
             margin: auto;
             padding: 60px 20px;
         }
 
+        /* ---------- PROJECTS & TAGS ---------- */
         .project {
             background: #020617;
+            font-family: 'Poppins', sans-serif;
             border-radius: 16px;
             padding: 35px;
             margin-bottom: 50px;
@@ -73,6 +163,12 @@
             grid-template-columns: 1.1fr 1fr;
             gap: 30px;
             margin-top: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
         }
 
         p {
@@ -114,19 +210,49 @@
             color: #38bdf8;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
+        /* ================= MOBILE NAV ================= */
+        @media (max-width: 1200px) {
+        .nav-links {
+            position: absolute;
+            top: 56px; /* UPDATED: matches reduced navbar */
+            right: 12px;
             background: #020617;
-            color: #94a3b8;
+            flex-direction: column;
+            width: 210px;
+            padding: 0.8rem;
+            display: none;
+            border-radius: 8px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
         }
 
-        @media (max-width: 900px) {
-            .project-content {
-                grid-template-columns: 1fr;
-            }
+        .nav-links.active {
+            display: flex;
         }
 
+        .nav-links a {
+            padding: 0.55rem 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-toggle {
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .hero h2 {
+            font-size: 1.1rem;
+        }
+        }
+
+        /* ---------- SCROLL SHADOW ---------- */
+        .navbar.scroll-shadow {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        transition: box-shadow 0.3s ease;
+        }
+        
         /* Global Navbar Header */
         .site-header {
             padding: 20px 60px;
@@ -159,23 +285,51 @@
             background: #020617;
             text-align: center;
         }
+        
+        /* ---------- FOOTER ---------- */
+        footer {
+        text-align: center;
+        padding: 40px 20px;
+        background: #020617;
+        margin-top: 60px;
+        }
+
+        footer a {
+        color: #38bdf8;
+        text-decoration: none;
+        }
+
+        footer a:hover {
+        text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
 
-<!-- ===== Global Navigation Header ===== -->
-<header class="site-header">
-    <h1>Nikhil Chaudhary</h1>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../engineering.html">Engineering</a>
-        <a href="foundation-projects.html">Foundation</a>
-        <a href="../contact.html">Contact</a>
-    </nav>
-</header>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            <a href="../index.html"><span>Nikhil Chaudhary</span></a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../engineering.html">Engineering</a></li>
+            <li><a href="foundation-projects.html">Foundation</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
+</nav>
 
 <!-- ===== Page Intro Header ===== -->
 <header class="page-header">
@@ -425,6 +579,7 @@
 <footer>
     © 2025 Nikhil Chaudhary · Unity Game Developer · Systems & Architecture
 </footer>
-
+ <!-- JS -->
+    <script src="../js/main.js"></script>
 </body>
 </html>
