@@ -1,60 +1,309 @@
-Hi 👋, I'm Nikhil Chaudhary
+# 👋 Hi, I'm Nikhil Chaudhary
 
-I am a Multiplayer Unity Game Developer with 2+ years of professional experience building mobile, WebGL, and real-time multiplayer games using Unity and C#. I have worked on Android, iOS, and WebGL platforms and specialize in scalable gameplay systems, multiplayer architecture, and production-ready game development.
+## 🎮 Multiplayer Unity Game Developer
 
-About Me
+---
 
-I am a Unity Game Developer with over two years of industry experience, currently working on production-level mobile and multiplayer games. I transitioned into a full-time Unity Developer role at Deftsoft, where I contributed to live games with more than five million 5M users. My work involved multiplayer systems, scalable gameplay architecture, and maintaining production stability for real-world applications.
+I am a **Multiplayer Unity Game Developer** with **2+ years of professional experience** building **casual, hyper-casual, multiplayer, and real-time games** using **Unity** and **C#**.
 
-I enjoy building clean, modular, and performance-optimized systems. I strongly prioritize maintainability, scalability, and long-term stability over quick or temporary solutions.
+I have worked on **Android, iOS, Windows, and WebGL** platforms and specialize in:
 
-Professional Highlights
+- ⚡ Multiplayer Architecture
+- 🧠 Gameplay Systems
+- 🏗️ Clean & Scalable Architecture
+- 🚀 Performance Optimization
+- 🌐 Backend Integration
+- 🎨 Production-Ready UI/UX
+- 📱 Mobile Gameplay Optimization
+- 🎯 Hyper-Casual & Casual Game Development
 
-I have worked on live production games with over five million 5M+ downloads and supported global users with localization-ready UI systems. I have designed and implemented real-time multiplayer systems using Photon and Socket.IO and optimized gameplay performance for both mobile devices and WebGL builds. My development approach focuses on clean architecture using state machines, ScriptableObjects, and event-driven systems. I am comfortable collaborating in team environments using Git-based workflows and debugging live production issues.
+---
 
-Technical Skills
+# 👨‍💻 About Me
 
-I work primarily with Unity for both 2D and 3D game development and also have beginner-level experience with Unreal Engine using Blueprints, UI systems, and authentication flows. My programming experience includes C#, C++, C, and JavaScript. I develop games for Android, iOS, Windows, and WebGL platforms.
+I am a Unity Game Developer currently working on production-level mobile and multiplayer games. I transitioned into a full-time Unity Developer role at **Deftsoft**, where I contributed to live production games with more than **5M+ downloads**.
 
-For multiplayer and networking, I use Photon PUN for peer-based multiplayer systems and Socket.IO for real-time client–server communication. On the backend, I have experience with Firebase for authentication, databases, push notifications, and Node.js with MongoDB for scalable backend services.
+My work primarily focuses on:
+- 🌐 Real-time Multiplayer Systems
+- 🧩 Modular Gameplay Architecture
+- 📱 Mobile Optimization
+- 🎨 Responsive & Localization-Ready UI Systems
+- ⚡ Performance Optimization
+- 🔧 Production Stability & Bug Fixing
 
-I follow clean and modular architecture principles using state machines, ScriptableObjects, event-driven patterns, and object pooling to ensure optimized performance. For UI and collaboration, I work with Unity UI systems, localization frameworks, responsive UI scaling, Git, and GitHub.
+I strongly prioritize:
+- ✅ Maintainability
+- ✅ Scalability
+- ✅ Clean Architecture
+- ✅ Long-Term Stability
+- ✅ Performance-Oriented Development
 
-Areas of Interest
+---
 
-I enjoy working on mobile and multiplayer games, real-time online gameplay systems, gameplay architecture and system design, performance optimization related to FPS, memory, and garbage collection, tilemap-based level design, and polished UI and UX for mobile platforms.
+# 🚀 Professional Highlights
 
-Featured Projects
-Alnahsha Run
+- 🎮 Experience developing **Hyper-Casual, Casual & Multiplayer Mobile Games**
+- 📈 Contributed to live production games with **5M+ downloads**
+- ⚡ Built scalable and lightweight gameplay systems optimized for mobile devices
+- 🌐 Developed real-time multiplayer systems using **Photon**, **Fusion**, **Socket.IO**, and **Colyseus**
+- 🔥 Integrated backend systems using **Firebase**, **Node.js**, and **MongoDB**
+- 🎨 Built responsive and localization-ready UI systems
+- 🚀 Optimized gameplay performance for **Mobile** & **WebGL**
+- 🏗️ Designed scalable architectures using:
+  - State Machines
+  - ScriptableObjects
+  - Event-Driven Systems
+  - Object Pooling
+- 🔄 Experienced with Git-based collaborative workflows
+- 🐞 Debugged and maintained live production systems
 
-Alnahsha Run is an endless runner game released on Android and iOS with more than five million 5M+ downloads. I worked on gameplay improvements and production bug fixes, designed a reusable UI scaling system, made the UI fully localization-ready, optimized the user experience for multiple screen sizes, and contributed to a live production games with real users on global platforms.
+---
 
-Multiplayer Card Game
+# 🛠️ Technical Skills
 
-This is a real-time multiplayer card game developed for Android. The project includes room-based multiplayer gameplay, Google Sign-In using Firebase authentication, friend systems, matchmaking, and leaderboards. I implemented Socket.IO-based real-time synchronization, integrated Firebase Cloud Messaging for push notifications, and added social invite features using platforms like WhatsApp. The multiplayer flow is optimized to handle unstable mobile network conditions.
+## 🎮 Game Engines
+- Unity (2D & 3D)
+- Unreal Engine (Beginner)
 
-Deft Runner
+## 💻 Programming Languages
+- C#
+- C++
+- C
+- JavaScript
 
-Deft Runner is a 3D endless runner game developed for Android. I implemented core runner mechanics and player controls, used origin shifting to solve floating-point precision issues, applied object pooling to reduce garbage collection spikes, integrated Unity Addressables for better memory management, and structured the overall gameplay flow using clean state-based systems.
+## 🌐 Multiplayer & Networking
+- Photon PUN2
+- Photon Fusion
+- Socket.IO
+- Colyseus
 
-City Builder – Resource Management Game
+## 🔥 Backend & Services
+- Firebase
+- Node.js
+- MongoDB
 
-This is a resource management and city builder game developed for both WebGL and Android. I implemented building and resource systems, persistent player progression, and backend integration using Node.js and MongoDB. I also optimized performance specifically for WebGL and designed the game architecture to be modular and scalable.
+## 🧱 Architecture & Systems
+- SOLID Principles
+- State Machines
+- ScriptableObjects
+- Event-Driven Architecture
+- Object Pooling
 
-Multiplayer Tank Battle Game (In Progress)
+## 📱 Platforms
+- Android
+- iOS
+- Windows
+- WebGL
 
-A Battle City–style real-time multiplayer tank game currently in development using Unity, targeting cross-platform deployment (Android, iOS, Windows, and WebGL). The project includes player movement, shooting, and damage systems, tile-based level design using Unity Tilemap, player-ready synchronization before gameplay starts, and ScriptableObject-driven tank and weapon configurations. The multiplayer architecture supports dynamic player counts from one to four players using Photon PUN, custom room properties, and RaiseEvent-based deterministic synchronization.
+## 🧰 Tools & Collaboration
+- Git
+- GitHub
+- Unity UI
+- Localization Systems
+- Responsive UI Scaling
 
-Professional Growth Journey
+---
 
-My journey started with strong foundations in gameplay programming and Unity systems, followed by advanced gameplay mechanics and performance optimization. I am now working on production-level projects involving multiplayer systems and large-scale applications with millions of users.
+# ❤️ Areas of Interest
 
-Contact
+- 🎮 Mobile Game Development
+- 🌐 Multiplayer & Real-Time Networking
+- ⚡ Gameplay Systems & Architecture
+- 📈 Performance Optimization (FPS, Memory, GC)
+- 🗺️ Tilemap-Based Level Design
+- 🎨 Mobile UI/UX Systems
+- 🎯 Hyper-Casual & Casual Games
+- 📱 Mobile Gameplay Systems & Optimization
+- 💰 Monetization-Ready Gameplay Architecture
+- 🧠 Clean & Scalable Game Architecture
+- 🚀 Cross-Platform Game Development
 
-Email: nikhilchaudhary285@gmail.com
+---
 
-LinkedIn: https://www.linkedin.com/in/nikhilchaudhary285/
+# 🌟 Featured Projects
 
-GitHub: https://github.com/NikhilChaudhary285
+## 🏃 Alnahsha Run
+An endless runner game released on Android & iOS with **5M+ downloads**.
 
-⭐ Feel free to explore my repositories and connect with me. I am always open to discussions about Unity development, multiplayer systems, and game architecture.
+### Contributions
+- Gameplay improvements
+- Production bug fixing
+- Localization-ready UI system
+- Responsive UI scaling
+- Live production support
+
+🎥 Demo Video:  
+https://drive.google.com/file/d/1nCoM8EgQByPL0qwkNE9VH8T2wXpjZ-mY/view?usp=sharing
+
+---
+
+## 🃏 Multiplayer Card Game
+A real-time multiplayer card game for Android.
+
+### Features
+- Room-based multiplayer
+- Firebase Authentication
+- Friend systems
+- Matchmaking
+- Leaderboards
+- WhatsApp social invites
+- Push notifications
+
+### Tech Used
+- Socket.IO
+- Firebase
+- Node.js
+
+🎥 Demo Video:  
+https://drive.google.com/file/d/1qN2d6zHONrlRwKGGro0xoBqKicwFMzhH/view?usp=sharing
+
+---
+
+## 🏃‍♂️ Deft Runner
+A 3D endless runner game developed for Android.
+
+### Contributions
+- Core gameplay systems
+- Origin shifting
+- Object pooling
+- Addressables integration
+- State-based gameplay flow
+
+🎥 Demo Video:  
+https://drive.google.com/file/d/1ZjhA80vc11i3IVcC1PCAXfBZackmJEiZ/view?usp=sharing
+
+---
+
+## 🏙️ City Builder – Resource Management Game
+A resource management & city builder game for WebGL & Android.
+
+### Features
+- Building systems
+- Resource systems
+- Persistent progression
+- Node.js backend integration
+- WebGL optimization
+
+🎥 Demo Video:  
+https://drive.google.com/file/d/1OiCZiFMJrmvgT7rq6hSBsdjcRFMpFrKg/view?usp=sharing
+
+---
+
+## 🚓 Multiplayer Tank Battle Game (In Progress)
+A Battle City–style multiplayer tank game built using Unity.
+
+### Features
+- Offline & Online Modes
+- Photon PUN Multiplayer
+- Tilemap-based levels
+- Dynamic 1–4 player support
+- RaiseEvent synchronization
+- ScriptableObject-driven systems
+
+🎥 Demo Video:  
+https://drive.google.com/file/d/1p-b62e9rE4O7p42PqA77OJCi2lgRa590/view?usp=sharing
+
+---
+
+# 📂 Foundation Projects
+
+## 🎮 VR Interaction Prototype (XR)
+https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/view?usp=sharing
+
+## 🧩 Sudoku Game Prototype
+https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/view?usp=sharing
+
+## 🐍 Snake Game Prototype
+https://drive.google.com/file/d/1yCiS07_-4VxVl1l8VBO8_YTlKFVZ_5rm/view?usp=sharing
+
+## 🏃 Runner Game (Android)
+https://drive.google.com/file/d/1kg0d0onaqjeXEH0_5EgZP55r8CgbN29a/view?usp=sharing
+
+## 🚀 Space War (Android)
+https://drive.google.com/file/d/1k66tYQfXYUDZgQfcYW42ZFQvEHl8jcW5/view?usp=sharing
+
+---
+
+# 🧪 Prototype Projects
+
+## 🖼️ Image Downloader System
+https://drive.google.com/file/d/1MqaLM23hXKbXuAuuor-WFplhZJYfx43N/view?usp=sharing
+
+## 📜 Touch Scroll Menu
+https://drive.google.com/file/d/1OvCGp2qHFVf1361gJP61XTzvATsnpKOy/view?usp=sharing
+
+## 🪙 Coin Change Algorithm
+https://drive.google.com/file/d/1OL3WnLgpYZLYUxcHmRtyU0EL2FZ-GieR/view?usp=sharing
+
+## ⚡ Orb Click Game (Fusion)
+https://drive.google.com/file/d/1WVju_96nDcXoj0tC3D6uOxFx1CUuEHP0/view?usp=sharing
+
+## 🧠 EchoRealm Physics Puzzle
+https://drive.google.com/file/d/13KUdexL0Ib0fUkV8topen8W_HAT3_5md/view?usp=sharing
+
+## 🎲 Evolx Dice Assignment
+https://drive.google.com/file/d/138jGetTdDtE7mwRb7etYIdaVcpAKiFiP/view?usp=sharing
+
+## 🌐 Colyseus Multiplayer Game
+https://drive.google.com/file/d/1DuBpsr_5JBLUTJuovOrSIuQBQQidUlVe/view?usp=sharing
+
+## 📡 Network Data Optimization
+https://drive.google.com/file/d/1i2o3uwph4UPJG3K8IdRaNkPK0qha_oHZ/view?usp=sharing
+
+---
+
+# 🌐 Portfolio & Contact
+
+## 🌍 Portfolio
+https://nikhilchaudhary285.github.io/
+
+## 💻 GitHub
+https://github.com/NikhilChaudhary285
+
+## 🔗 LinkedIn
+https://www.linkedin.com/in/nikhilchaudhary285/
+
+## 📧 Email
+nikhilchaudhary285@gmail.com
+
+---
+
+# 🛠️ Tools
+
+## 📄 PDF Merger Tool
+Merge multiple PDFs into one.
+
+https://nikhilchaudhary285.github.io/pdf-toolkit/
+
+---
+
+# 📄 Resume
+
+https://drive.google.com/file/d/1y1YhSnJ4r80AItPlwICeL0zaSHakpWK0/view?usp=sharing
+
+---
+
+# ⭐ Let's Connect
+
+Feel free to explore my repositories and connect with me.  
+I am always open to discussions about:
+
+- Unity Development
+- Multiplayer Systems
+- Game Architecture
+- Performance Optimization
+- Mobile Game Development
+
+---
+
+## 👨‍💻 Author
+
+**Nikhil Chaudhary**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NikhilChaudhary285)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nikhilchaudhary285/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nikhilchaudhary285.github.io/)
+
+> 🎮 Unity Developer | Multiplayer Systems | Mobile Games | Clean Architecture
+
+---
