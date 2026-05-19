@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Nikhil Chaudhary
 
-## 🎮 Multiplayer Unity Game Developer
+## 🎮 Unity Game Developer | Multiplayer & Mobile Specialist
 
 ---
 
@@ -279,7 +279,7 @@ https://nikhilchaudhary285.github.io/pdf-toolkit/
 
 # 📄 Resume
 
-https://drive.google.com/file/d/1y1YhSnJ4r80AItPlwICeL0zaSHakpWK0/view?usp=sharing
+https://drive.google.com/file/d/1kqtVwpTjsFVIw5ZFF5MGju7U2eXfAdhG/view?usp=sharing
 
 ---
 
