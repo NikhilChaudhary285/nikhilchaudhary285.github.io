@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Nikhil Chaudhary
 
-## 🎮 Multiplayer Unity Game Developer
+## 🎮 Unity Game Developer | Multiplayer & Mobile Specialist
 
 ---
 
