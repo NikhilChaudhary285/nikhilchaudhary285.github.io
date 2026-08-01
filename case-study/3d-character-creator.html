@@ -1,0 +1,190 @@
+<!-- ================= CASE STUDY: 3D CHARACTER CREATOR ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Character Creator Tool | Case Study | Nikhil Chaudhary</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/icons/icon.png" type="image/png">
+
+    <!-- SEO -->
+    <meta name="description" content="Case study: a Windows 3D character customization tool with blendshape-driven facial morphing and a production export pipeline optimized by 1900%." />
+    <meta name="author" content="Nikhil Chaudhary" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        /* ---------- FOOTER ---------- */
+        .impact { background:#020617; padding:30px; border-radius:12px; margin-top:40px; }
+        footer { margin-top:80px; padding:25px; background:#020617; color:#94a3b8; text-align:center; }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            <a href="../index.html"><span>Nikhil Chaudhary</span></a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../engineering.html">Engineering</a></li>
+            <li><a href="foundation-projects.html">Foundation</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="hero">
+    <div class="container">
+        <h1>3D Character Creator Tool</h1>
+        <h2>Blendshape-Driven Character Customization &amp; Export Pipeline</h2>
+        <p class="hero-description">
+            Windows • Character Customization • Production Tooling • Confidential
+        </p>
+
+        <div style="margin-top:16px;">
+            <span class="pill">Unity 2022 LTS</span>
+            <span class="pill">Blendshapes</span>
+            <span class="pill">C#</span>
+            <span class="pill">Coroutine-Based Processing</span>
+            <span class="pill">1900% Optimization</span>
+        </div>
+    </div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section>
+    <h3>Project Overview</h3>
+    <p>
+        A Windows-based production tool built to let artists and designers customize
+        3D characters — facial morphing, hair, skin, and color variations — without
+        touching code. What started as a customization tool became a case study in
+        pipeline engineering after its export step turned out to be the team's biggest
+        production bottleneck.
+    </p>
+    <p>
+        This project sits alongside my mobile/multiplayer work as proof that my
+        optimization mindset extends to internal tooling, not just runtime gameplay
+        performance.
+    </p>
+</section>
+
+<!-- ================= ROLE ================= -->
+<section>
+    <h3>My Role &amp; Responsibilities</h3>
+    <ul>
+        <li>Built the blendshape-driven facial morphing and customization system</li>
+        <li>Implemented hair, skin, and color gradient customization workflows</li>
+        <li>Designed the character export pipeline used by the production team</li>
+        <li>Identified and resolved a critical export bottleneck, delivering a 1900% throughput improvement</li>
+    </ul>
+</section>
+
+<!-- ================= ENGINEERING ================= -->
+<section>
+    <h3>Engineering &amp; System Design</h3>
+
+    <h4>Blendshape &amp; Customization System</h4>
+    <p>
+        Facial morphing and body customization are driven entirely through blendshapes,
+        letting non-technical team members produce character variations through simple
+        sliders and presets rather than manual mesh editing.
+    </p>
+
+    <h4>The Export Bottleneck</h4>
+    <p>
+        The original export step processed characters one at a time, synchronously,
+        which meant the production team could only generate around <strong>20 exports</strong>
+        in a working session — a hard ceiling on how fast new character variants could
+        reach the game.
+    </p>
+
+    <h4>The Fix: Coroutine-Based Batch Processing</h4>
+    <p>
+        I redesigned the export step around <strong>coroutine-based processing</strong> combined
+        with memory optimization, so exports could be batched and processed without blocking
+        the editor or accumulating memory across the run. This took throughput from
+        <strong>20 exports to 1000+ exports within 5 minutes</strong> — roughly a
+        <strong>1900% improvement</strong>, and directly unblocked the production team's workflow.
+    </p>
+</section>
+
+<!-- ================= CHALLENGES ================= -->
+<section>
+    <h3>Challenges &amp; Solutions</h3>
+
+    <p><strong>Challenge: Synchronous exports blocking the editor and capping throughput</strong></p>
+    <p>
+        Each export ran fully synchronously on the main thread, so batch exports meant
+        long, uninterruptible waits and a hard practical limit on daily output.
+    </p>
+    <p>
+        <strong>Solution:</strong> Rebuilt the export step as a coroutine pipeline, processing
+        characters incrementally instead of blocking, and adding memory optimization to
+        prevent accumulation across large batch runs.
+    </p>
+
+    <p><strong>Challenge: Keeping the tool usable for non-programmers</strong></p>
+    <p>
+        The performance fix couldn't come at the cost of usability — artists still needed
+        a simple, slider-driven interface for character customization.
+    </p>
+    <p>
+        <strong>Solution:</strong> Kept the customization UI untouched and isolated the
+        optimization entirely inside the export pipeline, so the artist-facing workflow
+        stayed exactly the same while throughput improved underneath it.
+    </p>
+</section>
+
+<!-- ================= IMPACT ================= -->
+<section>
+    <h3>Impact &amp; Results</h3>
+    <ul>
+        <li><strong>1900% export pipeline optimization</strong> — 20 exports to 1000+ exports in 5 minutes</li>
+        <li>Directly unblocked the production team's character variation workflow</li>
+        <li>Established a reusable pattern (coroutine batching + memory optimization) referenced in later pipeline work</li>
+        <li>Delivered without changing the artist-facing customization interface</li>
+    </ul>
+</section>
+
+<!-- ================= LINKS ================= -->
+<section>
+    <h3>Source</h3>
+    <p>
+        🔒 This project is confidential and its source is not publicly available.
+        Details above are shared with permission for portfolio purposes.
+    </p>
+</section>
+
+<!-- ================= CTA ================= -->
+<!-- <section>
+    <div style="text-align:center;">
+        <a href="../projects.html" class="btn primary">← Back to Projects</a>
+        <a href="../contact.html" class="btn secondary">Let's Talk</a>
+    </div>
+</section> -->
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2026 Nikhil Chaudhary | 3D Character Creator Case Study
+</footer>
+
+<!-- JS -->
+<script src="../js/main.js"></script>
+</body>
+</html>

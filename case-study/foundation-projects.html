@@ -186,10 +186,31 @@
             margin-bottom: 8px;
         }
 
-        iframe {
+        /* iframe {
             width: 100%;
             height: 260px;
             border-radius: 12px;
+            border: none;
+        } */
+
+        .project-content > div:last-child {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .video-4x3 {
+            padding-top: 75%; /* 4:3 — overrides the default 16:9 for these two */
+        }
+
+        .project-content > div:last-child iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
         }
 
@@ -381,6 +402,13 @@
                 <strong>Layer Collision Matrix</strong> to offload filtering to the engine.
             </p>
 
+            <p><strong>Key Learning:</strong></p>
+            <p>
+                Offloading collision filtering to the engine — instead of manual script-level
+                checks — reduces unnecessary checks, cleans up architecture, and scales easily
+                to new enemy and projectile types.
+            </p>
+
             <div class="buttons">
                 <a href="https://github.com/NikhilChaudhary285/Space-War"
                     class="btn"
@@ -472,8 +500,15 @@
                 <li>Delegate-based communication</li>
             </ul>
 
-            <p>
+             <p>
                 Learned when coroutines are better than <code>Update()</code>.
+            </p>
+
+            <p><strong>Key Learning:</strong></p>
+            <p>
+                Strengthened understanding of when coroutine-driven flow is a cleaner fit than
+                <code>Update()</code>, and how a Singleton Game Manager plus delegate-based
+                communication keeps gameplay flow decoupled and easy to reason about.
             </p>
 
             <div class="buttons">
@@ -517,6 +552,12 @@
                 <li>Data structure optimization</li>
             </ul>
 
+            <p><strong>Key Learning:</strong></p>
+            <p>
+                Practiced recursive backtracking and constraint validation, and how the right
+                data structures keep board generation and solving efficient at scale.
+            </p>
+
             <div class="buttons">
                 <a href="https://github.com/NikhilChaudhary285/SudokuGame"
                     class="btn"
@@ -529,7 +570,11 @@
             </div>
         </div>
 
-        <div>
+        <!-- <div>
+            <iframe src="https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/preview"
+                    allowfullscreen loading="lazy"></iframe>
+        </div> -->
+        <div class="video-4x3">
             <iframe src="https://drive.google.com/file/d/1syy-C9bjcwzm820rz_6plL83aGWlJivf/preview"
                     allowfullscreen loading="lazy"></iframe>
         </div>
@@ -558,6 +603,13 @@
                 <li>XR Device Simulator testing</li>
             </ul>
 
+            <p><strong>Key Learning:</strong></p>
+            <p>
+                Explored natural object interaction and VR usability through physics-driven
+                grabbing, and validated interactions using the XR Device Simulator without
+                needing a headset for every test pass.
+            </p>
+
             <div class="buttons">
                 <a href="https://github.com/NikhilChaudhary285/VR-Interaction-Prototype---XR"
                     class="btn"
@@ -570,7 +622,11 @@
             </div>
         </div>
 
-        <div>
+        <!-- <div>
+            <iframe src="https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/preview"
+                    allowfullscreen loading="lazy"></iframe>
+        </div> -->
+        <div class="video-4x3">
             <iframe src="https://drive.google.com/file/d/1HvQZrKMXPl3q5Gp1Py6YsQDbEOaQndlR/preview"
                     allowfullscreen loading="lazy"></iframe>
         </div>

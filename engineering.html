@@ -87,7 +87,7 @@
 
 <!-- ================= MULTIPLAYER ================= -->
 <section>
-    <h3>2. Multiplayer Architecture (Photon PUN & Socket.IO)</h3>
+    <h3>2. Multiplayer Architecture (Photon, Unity NGO, Socket.IO & Colyseus)</h3>
 
     <p>
         Multiplayer engineering is about <span class="highlight">state consistency</span>,
@@ -99,8 +99,9 @@
     <ul>
         <li>Room-based architecture with dynamic player counts (1–4 players)</li>
         <li>Player-ready state synchronization before gameplay begins</li>
-        <li>Master-client authority where deterministic control is required</li>
-        <li>Scene synchronization using <strong>AutomaticallySyncScene</strong></li>
+        <li>Master-client / server authority where deterministic control is required</li>
+        <li>Scene synchronization using <strong>AutomaticallySyncScene</strong> (Photon) and NGO's network scene management</li>
+        <li>Session reconnection using UID- and slot-based state restoration, surviving PlayerRef/clientId reassignment on rejoin</li>
     </ul>
 
     <p>
@@ -122,6 +123,13 @@
     </ul>
 
     <p>
+        For projects needing a fully server-authoritative model, I've also built with
+        <span class="highlight">Unity NGO</span> and <span class="highlight">Colyseus</span> —
+        NGO for host-authoritative combat and AI (see <em>Arena Protocol</em>), and Colyseus
+        to compare a Node.js-based authoritative server against Photon's model directly.
+    </p>
+
+    <p>
         This hybrid approach allows me to separate
         <span class="highlight">gameplay synchronization</span>
         from <span class="highlight">backend communication</span>,
@@ -129,11 +137,14 @@
     </p>
 
     <div>
-        <span class="pill"> • Photon PUN • </span>
+        <span class="pill"> • Photon PUN2/Fusion • </span>
+        <span class="pill">Unity NGO • </span>
         <span class="pill">Socket.IO • </span>
+        <span class="pill">Colyseus • </span>
         <span class="pill">Room Properties • </span>
         <span class="pill">RaiseEvent • </span>
-        <span class="pill">Real-Time Systems</span>
+        <span class="pill">Real-Time Systems • </span>
+        <span class="pill">Session Reconnection</span>
     </div>
 </section>
 
