@@ -1,0 +1,204 @@
+<!-- ================= CASE STUDY: ARENA PROTOCOL ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Protocol | Case Study | Nikhil Chaudhary</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/icons/icon.png" type="image/png">
+
+    <!-- SEO -->
+    <meta name="description" content="Case study: Arena Protocol, a 2-player co-op multiplayer survival arena built with Unity Netcode for GameObjects (NGO), featuring a modular ability system and full session reconnection." />
+    <meta name="author" content="Nikhil Chaudhary" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+        /* ---------- FOOTER ---------- */
+        .impact { background:#020617; padding:30px; border-radius:12px; margin-top:40px; }
+        footer { margin-top:80px; padding:25px; background:#020617; color:#94a3b8; text-align:center; }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            <a href="../index.html"><span>Nikhil Chaudhary</span></a>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../engineering.html">Engineering</a></li>
+            <li><a href="foundation-projects.html">Foundation</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            ☰
+        </button>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="hero">
+    <div class="container">
+        <h1>Arena Protocol</h1>
+        <h2>2-Player Co-op Multiplayer Survival Arena</h2>
+        <p class="hero-description">
+            Real-Time Multiplayer • Netcode for GameObjects (NGO) • Windows
+        </p>
+
+        <div style="margin-top:16px;">
+            <span class="pill">Unity 2022 LTS</span>
+            <span class="pill">Netcode for GameObjects</span>
+            <span class="pill">Server-Authoritative</span>
+            <span class="pill">State Machines</span>
+            <span class="pill">Session Reconnection</span>
+        </div>
+    </div>
+</header>
+
+<!-- ================= OVERVIEW ================= -->
+<section>
+    <h3>Project Overview</h3>
+    <p>
+        Arena Protocol is a real-time 2-player co-op survival arena built with
+        <strong>Unity Netcode for GameObjects (NGO)</strong>. Two players fight through
+        wave-based enemies together, using a modular ability kit — dash, projectile, and
+        heal — while the server maintains full authority over combat, AI, and scoring.
+    </p>
+    <p>
+        The project was built to deeply understand host-client networking fundamentals:
+        <strong>NetworkVariable</strong>-driven state replication, server-authoritative combat
+        validation, and — the hardest part — building a session system robust enough to
+        survive a real disconnect and reconnect without losing player progress.
+    </p>
+</section>
+
+<!-- ================= ROLE ================= -->
+<section>
+    <h3>My Role &amp; Responsibilities</h3>
+    <ul>
+        <li>Designed and implemented the complete NGO networking architecture (host-client model)</li>
+        <li>Built a modular ability system (<code>BaseAbility</code>) supporting Dash, Projectile, and Heal with independent networked cooldowns</li>
+        <li>Implemented a server-only enemy AI state machine (Patrol → Chase → Attack)</li>
+        <li>Built the session reconnection system, including slot-based state mapping to survive NGO's clientId changes on rejoin</li>
+        <li>Implemented synchronized energy orb collection, scoring, and cooldown UI</li>
+        <li>Wired real-time ping/RTT display and partner health UI</li>
+    </ul>
+</section>
+
+<!-- ================= ENGINEERING ================= -->
+<section>
+    <h3>Engineering &amp; System Design</h3>
+
+    <h4>Networking Model — Host-Client (NGO)</h4>
+    <p>
+        The host acts as both server and Player 1; all authoritative gameplay logic runs on the host.
+        The client sends input to the server and renders the resulting replicated state.
+    </p>
+    <ul>
+        <li><strong>NetworkVariable&lt;T&gt;</strong> replicates health, score, and cooldown timers automatically to all clients</li>
+        <li><strong>NetworkTransform</strong> handles interpolated position sync for players and enemies</li>
+        <li><strong>ServerRpc</strong> for client-to-server actions (firing, ability activation)</li>
+        <li><strong>ClientRpc</strong> for server-to-all broadcasts (projectile velocity, orb collection)</li>
+    </ul>
+
+    <h4>Modular Ability System</h4>
+    <p>
+        Every ability extends an abstract <code>BaseAbility</code> (itself a <code>NetworkBehaviour</code>)
+        with a server-authoritative cooldown tick and a shared <code>TryActivate()</code> pattern. New abilities
+        only need to extend the base class and implement <code>Activate()</code> — no changes required elsewhere.
+    </p>
+
+    <h4>Server-Authoritative Enemy AI</h4>
+    <p>
+        Enemy behavior runs exclusively on the server as a Patrol → Chase → Attack state machine,
+        eliminating any possibility of enemy desync between clients. Positions replicate to clients
+        via NetworkTransform interpolation.
+    </p>
+</section>
+
+<!-- ================= CHALLENGES ================= -->
+<section>
+    <h3>Challenges &amp; Solutions</h3>
+
+    <p><strong>Challenge: Reconnection with a shifting clientId</strong></p>
+    <p>
+        NGO assigns a new <code>clientId</code> to a client on every reconnect, so any session state
+        keyed directly on <code>clientId</code> breaks the moment a player rejoins.
+    </p>
+    <p>
+        <strong>Solution:</strong> Built a <code>SessionManager</code> using a static, slot-based dictionary
+        instead of a clientId-keyed one. Health and ability cooldown state are saved on disconnect and
+        restored once the player object respawns after rejoin — regardless of the new clientId assigned.
+    </p>
+
+    <p><strong>Challenge: Bridging scene UI to dynamically spawned player prefabs</strong></p>
+    <p>
+        Prefab Inspector references can't point at scene objects directly, but health bars and ability UI
+        needed to react to a player prefab that only exists at runtime.
+    </p>
+    <p>
+        <strong>Solution:</strong> A one-time <code>GameObject.Find()</code> wiring step on player spawn bridges
+        the scene UI to the spawned prefab, with zero runtime performance cost since it only fires once.
+    </p>
+</section>
+
+<!-- ================= TRADEOFFS ================= -->
+<section>
+    <h3>Engineering Tradeoffs</h3>
+    <ul>
+        <li><strong>Host-Client over Dedicated Server</strong> — simplest topology for a 2-player scope, at the cost of the host having a slight latency advantage and being a single point of failure</li>
+        <li><strong>CharacterController over Rigidbody</strong> — snappier, more predictable movement matching the "responsive, snappy" design goal, at the cost of physics-based player interactions</li>
+        <li><strong>No client-side prediction</strong> — simpler codebase appropriate for LAN/local-scope multiplayer, with a minor tradeoff on high-latency connections</li>
+    </ul>
+</section>
+
+<!-- ================= IMPACT ================= -->
+<section>
+    <h3>Impact &amp; Results</h3>
+    <ul>
+        <li>Stable 2-player co-op multiplayer with server-authoritative combat and AI</li>
+        <li>Full session reconnection — health, score, and ability cooldowns all restored on rejoin</li>
+        <li>Zero enemy state desync between clients, verified across repeated stress testing</li>
+        <li>Clean, extensible ability architecture — new abilities require no changes to existing systems</li>
+    </ul>
+</section>
+
+<!-- ================= LINKS ================= -->
+<section>
+    <h3>Gameplay &amp; Source</h3>
+    <p>
+        🎥 <a href="https://drive.google.com/file/d/1G69NQzM6XEuHGmR2MY8vK8lOAvrgYZQ4/preview" target="_blank">Gameplay Video</a><br/>
+        💻 <a href="https://github.com/NikhilChaudhary285/Arena-Protocol" target="_blank">GitHub Repository</a>
+    </p>
+</section>
+
+<!-- ================= CTA ================= -->
+<!-- <section>
+    <div style="text-align:center;">
+        <a href="../projects.html" class="btn primary">← Back to Projects</a>
+        <a href="../contact.html" class="btn secondary">Let's Talk</a>
+    </div>
+</section> -->
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2026 Nikhil Chaudhary | Arena Protocol Case Study
+</footer>
+
+<!-- JS -->
+<script src="../js/main.js"></script>
+</body>
+</html>

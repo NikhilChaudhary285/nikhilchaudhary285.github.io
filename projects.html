@@ -209,13 +209,30 @@
             }
         }
 
-        iframe {
+        /* iframe {
             width: 100%;
             height: 250px;
             border-radius: 12px;
             border: none;
+        } */
+
+        .video {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 12px;
+            overflow: hidden;
         }
 
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
         .buttons {
             margin-top: 20px;
         }
@@ -234,6 +251,41 @@
         .btn.secondary {
             background: #1e293b;
             color: #38bdf8;
+        }
+
+        /* ================= NEW ONE CSS ================= */
+        .compact-list {
+            background: #020617;
+            border-radius: 14px;
+            padding: 30px 35px;
+            margin-bottom: 40px;
+        }
+        .compact-list h2 { margin-bottom: 8px; }
+        .compact-list > p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .compact-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #1e293b;
+        }
+        .compact-item:last-child { border-bottom: none; }
+        .compact-item h4 {
+            color: #7dd3fc;
+            margin: 0 0 6px 0;
+            font-size: 16px;
+        }
+        .compact-item p {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+        .compact-item a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            margin-right: 16px;
         }
 
         /* ================= MOBILE NAV ================= */
@@ -553,6 +605,89 @@
     </div>
 </div>
 
+<!-- ================= ARENA PROTOCOL ================= -->
+<div class="project">
+    <h3>Multiplayer Arena Protocol</h3>
+    <div class="tags">
+        <span class="tag">Unity</span>
+        <span class="tag">Netcode for GameObjects</span>
+        <span class="tag">Multiplayer</span>
+        <span class="tag">Windows</span>
+    </div>
+
+    <div class="project-content">
+        <div class="content">
+            <p><strong>Overview:</strong></p>
+            <p>
+                A 2-player co-op survival arena built with Unity NGO, featuring
+                a modular ability system, server-authoritative enemy AI, and
+                full session reconnection with restored health, score, and cooldowns.
+            </p>
+
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Modular ability system (Dash, Projectile, Heal) via a shared BaseAbility class</li>
+                <li>Server-authoritative Patrol → Chase → Attack enemy AI state machine</li>
+                <li>Slot-based session management surviving NGO's clientId changes on reconnect</li>
+            </ul>
+
+            <p><strong>Impact:</strong></p>
+            <p>
+                Graceful reconnection with health, score, and ability cooldowns fully restored.
+            </p>
+
+            <div class="buttons">
+                <a href="https://github.com/NikhilChaudhary285/Arena-Protocol" class="btn" target="_blank">GitHub</a>
+                <a href="case-study/arena-protocol.html" class="btn secondary">
+                    Case Study
+                </a>
+                <a href="https://drive.google.com/file/d/1G69NQzM6XEuHGmR2MY8vK8lOAvrgYZQ4/preview" class="btn secondary" target="_blank">▶ Gameplay Video</a>
+            </div>
+        </div>
+
+        <!-- ===== Right Video Preview ===== -->
+        <div class="video">
+            <iframe src="https://drive.google.com/file/d/1G69NQzM6XEuHGmR2MY8vK8lOAvrgYZQ4/preview" allow="autoplay" loading="lazy" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<!-- ================= 3D CHARACTER CREATOR ================= -->
+<div class="project">
+    <h3>3D Character Creator Tool</h3>
+    <div class="tags">
+        <span class="tag">Unity</span>
+        <span class="tag">Blendshapes</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Confidential</span>
+    </div>
+
+    <div class="project-content">
+        <div class="content">
+            <p><strong>Overview:</strong></p>
+            <p>
+                A Windows character customization tool supporting facial morphing,
+                blendshape systems, and color/hair customization for a production pipeline.
+            </p>
+
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Blendshape-driven facial morphing and export workflows</li>
+                <li>Resolved the production export bottleneck that became a <strong>1900% optimization</strong></li>
+                <li>Scaled export throughput from 20 exports to 1000+ exports within 5 minutes</li>
+            </ul>
+
+            <div class="buttons">
+                <a href="#confidential" class="btn">Confidential</a>
+                <a href="case-study/3d-character-creator.html" class="btn secondary">
+                    Case Study
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ================= PROJECT 5 ================= -->
 <div class="project">
     <h3>City Builder – Resource Management Game</h3>
@@ -604,6 +739,67 @@
     </div>
 </div>
 
+</div>
+
+<!-- ================= ADDITIONAL PROJECTS (COMPACT) ================= -->
+<div class="compact-list">
+    <h2>Additional Engineering Projects</h2>
+    <p>Smaller prototypes and technical explorations across networking, AI, architecture, and mobile integration.</p>
+
+    <div class="compact-item">
+        <h4>OrbSync — Photon Fusion Rejoin System</h4>
+        <p>UID-based session restoration for Photon Fusion Shared Mode — rejoin within 30s with score and position intact, anti-duplication via host arbitration.</p>
+        <a href="https://github.com/NikhilChaudhary285/OrbSync-Fusion" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>Multiplayer Carrom Game</h4>
+        <p>Real-time 2-player Carrom with a custom Node.js + Socket.IO backend, server-authoritative turn validation, and physics state synchronization.</p>
+        <a href="https://github.com/NikhilChaudhary285/Multiplayer-Carrom-Game" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>Colyseus WebGL Multiplayer</h4>
+        <p>Server-authoritative browser multiplayer prototype comparing Colyseus against Photon and Socket.IO, with synced movement, animation, and skins.</p>
+        <a href="https://github.com/NikhilChaudhary285/Colyseus_WebGL_Multiplayer" target="_blank">GitHub →</a>
+        <a href="https://drive.google.com/file/d/1DuBpsr_5JBLUTJuovOrSIuQBQQidUlVe/view?usp=sharing" target="_blank">Demo Video →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>DiceSpirit — Event-Driven Architecture Prototype</h4>
+        <p>Modular dice gameplay system built around a centralized event bus and ScriptableObject-driven card data, with zero direct references between systems.</p>
+        <a href="https://github.com/NikhilChaudhary285/Evolx_DiceAssignment_Nikhil" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>Unity Technical Assignment Suite</h4>
+        <p>Three production-standard systems in one repo: coin-change DP algorithm, swipe-snap mobile scroll menu, and a concurrent image downloader with 3-tier caching — all SOLID/MVC architected.</p>
+        <a href="https://github.com/NikhilChaudhary285/GameDevAssignmentSuite" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>EchoRealm — Modular Physics Puzzle Framework</h4>
+        <p>Interface-driven puzzle architecture (IInteractable / IReceiver / IResettable) enabling new mechanics to be added with zero core code changes.</p>
+        <a href="https://github.com/NikhilChaudhary285/EchoRealm" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>Unity ML-Agents — Reinforcement Learning Training</h4>
+        <p>PPO-based RL agent training with randomized spawn positions to improve generalization, plus imitation learning and heuristic agent comparisons.</p>
+        <a href="https://github.com/NikhilChaudhary285/MLAgents" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>React Native + Unity Integration</h4>
+        <p>Production Android bridge between React Native and an embedded Unity scene, with custom IL2CPP Gradle build fixes and multi-ABI compilation.</p>
+        <a href="https://github.com/NikhilChaudhary285/ReactToUnity" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="compact-item">
+        <h4>Network Data Optimization Demo</h4>
+        <p>Local simulation of position-data quantization and interpolation, reducing payload from 96 bits to ~48 bits with smooth reconstructed movement.</p>
+        <a href="https://drive.google.com/file/d/1i2o3uwph4UPJG3K8IdRaNkPK0qha_oHZ/view?usp=sharing" target="_blank">Demo Video →</a>
+    </div>
 </div>
 
 <footer>
