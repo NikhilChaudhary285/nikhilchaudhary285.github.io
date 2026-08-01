@@ -291,7 +291,7 @@ Credly-verified validation of core Unity/C# fundamentals, completed alongside on
 
 # 📄 Resume
 
-https://drive.google.com/file/d/1vKB4JuGDNZ4UWTC9UC_nveVd28qI5ki5/view?usp=sharing
+https://drive.google.com/file/d/1A-XsiRVDkfQ2pKHtKxuRZOnHMcglt7qa/view?usp=sharing
 
 ---
 
