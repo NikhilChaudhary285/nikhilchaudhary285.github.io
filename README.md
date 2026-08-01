@@ -4,7 +4,7 @@
 
 ---
 
-I am a **Multiplayer Unity Game Developer** with **2+ years of professional experience** building **casual, hyper-casual, multiplayer, and real-time games** using **Unity** and **C#**.
+I am a **Multiplayer Unity Game Developer** with **2.6+ years of professional experience** building **casual, hyper-casual, multiplayer, and real-time games** using **Unity** and **C#**.
 
 I have worked on **Android, iOS, Windows, and WebGL** platforms and specialize in:
 
@@ -74,6 +74,7 @@ I strongly prioritize:
 ## 🌐 Multiplayer & Networking
 - Photon PUN2
 - Photon Fusion
+- Unity NGO (Netcode for GameObjects)
 - Socket.IO
 - Colyseus
 
@@ -250,6 +251,9 @@ https://drive.google.com/file/d/1DuBpsr_5JBLUTJuovOrSIuQBQQidUlVe/view?usp=shari
 ## 📡 Network Data Optimization
 https://drive.google.com/file/d/1i2o3uwph4UPJG3K8IdRaNkPK0qha_oHZ/view?usp=sharing
 
+## 🎮 Arena Protocol – NGO Multiplayer Survival Arena 
+https://drive.google.com/file/d/1G69NQzM6XEuHGmR2MY8vK8lOAvrgYZQ4/view?usp=sharing
+
 ---
 
 # 🌐 Portfolio & Contact
@@ -277,9 +281,17 @@ https://nikhilchaudhary285.github.io/pdf-toolkit/
 
 ---
 
+# 📜 Certifications
+
+**🎮 Unity Junior Programmer Pathway** — *Unity Technologies, Jul 2026*  
+Credly-verified validation of core Unity/C# fundamentals, completed alongside ongoing production work.  
+🔗 Verify: https://www.credly.com/go/oMRb0H0K
+
+---
+
 # 📄 Resume
 
-https://drive.google.com/file/d/1kqtVwpTjsFVIw5ZFF5MGju7U2eXfAdhG/view?usp=sharing
+https://drive.google.com/file/d/1A-XsiRVDkfQ2pKHtKxuRZOnHMcglt7qa/view?usp=sharing
 
 ---
 
