@@ -4,7 +4,7 @@
 
 ---
 
-I am a **Multiplayer Unity Game Developer** with **2+ years of professional experience** building **casual, hyper-casual, multiplayer, and real-time games** using **Unity** and **C#**.
+I am a **Multiplayer Unity Game Developer** with **2.6+ years of professional experience** building **casual, hyper-casual, multiplayer, and real-time games** using **Unity** and **C#**.
 
 I have worked on **Android, iOS, Windows, and WebGL** platforms and specialize in:
 
