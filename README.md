@@ -138,30 +138,6 @@ https://drive.google.com/file/d/1nCoM8EgQByPL0qwkNE9VH8T2wXpjZ-mY/view?usp=shari
 
 ---
 
-## 🃏 Multiplayer Card Game
-### Unity | Photon PUN2 | Socket.IO | Real-Time Multiplayer
-
-### 🔹 Features
-- Room-based multiplayer gameplay
-- Firebase Authentication
-- Friend systems
-- Matchmaking
-- Leaderboards
-- WhatsApp social invites
-- Push notifications
-- Network-resilient synchronization
-
-### 🔹 Tech Used
-- Photon PUN2
-- Socket.IO
-- Firebase
-- Node.js
-
-🎥 Demo Video:  
-https://drive.google.com/file/d/1qN2d6zHONrlRwKGGro0xoBqKicwFMzhH/view?usp=sharing
-
----
-
 ## 🛡️ Multiplayer Arena Protocol
 ### Unity 2022 LTS | Netcode for GameObjects | Windows | 2-Player Co-op
 
@@ -193,6 +169,30 @@ https://drive.google.com/file/d/1p-b62e9rE4O7p42PqA77OJCi2lgRa590/view?usp=shari
 
 ---
 
+## 🃏 Multiplayer Card Game
+### Unity | Photon PUN2 | Socket.IO | Real-Time Multiplayer
+
+### 🔹 Features
+- Room-based multiplayer gameplay
+- Firebase Authentication
+- Friend systems
+- Matchmaking
+- Leaderboards
+- WhatsApp social invites
+- Push notifications
+- Network-resilient synchronization
+
+### 🔹 Tech Used
+- Photon PUN2
+- Socket.IO
+- Firebase
+- Node.js
+
+🎥 Demo Video:  
+https://drive.google.com/file/d/1qN2d6zHONrlRwKGGro0xoBqKicwFMzhH/view?usp=sharing
+
+---
+
 ## 🏙️ City Builder – Resource Management Game
 ### Unity | WebGL & Android
 
@@ -209,6 +209,18 @@ https://drive.google.com/file/d/1OiCZiFMJrmvgT7rq6hSBsdjcRFMpFrKg/view?usp=shari
 
 ---
 
+## 🧍 3D Character Creator Tool
+### Windows | Character Customization System
+
+### 🔹 Features
+- Blendshape customization
+- Facial morphing
+- Hair & skin customization
+- Color gradients
+- Advanced export pipeline optimization
+
+---
+
 ## 🏃‍♂️ Deft Runner
 ### 3D Endless Runner | Android
 
@@ -221,18 +233,6 @@ https://drive.google.com/file/d/1OiCZiFMJrmvgT7rq6hSBsdjcRFMpFrKg/view?usp=shari
 
 🎥 Demo Video:  
 https://drive.google.com/file/d/1ZjhA80vc11i3IVcC1PCAXfBZackmJEiZ/view?usp=sharing
-
----
-
-## 🧍 3D Character Creator Tool
-### Windows | Character Customization System
-
-### 🔹 Features
-- Blendshape customization
-- Facial morphing
-- Hair & skin customization
-- Color gradients
-- Advanced export pipeline optimization
 
 ---
 
