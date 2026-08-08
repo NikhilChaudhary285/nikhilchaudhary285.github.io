@@ -220,6 +220,8 @@
         </p>
 
         <span class="badge">Unity</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">MongoDB</span>
         <span class="badge">Simulation</span>
         <span class="badge">Resource Economy</span>
         <span class="badge">Progression Systems</span>
@@ -260,7 +262,9 @@
         <h3>Resource Economy Architecture</h3>
         <p>
             The game uses a centralized resource manager that controls
-            generation, storage, and consumption of all resources.
+            generation, storage, and consumption of all resources. Backend state —
+            including progression and resource persistence — is synced through a
+            Node.js service backed by MongoDB.
         </p>
         <ul>
             <li>Single source of truth for resource data</li>

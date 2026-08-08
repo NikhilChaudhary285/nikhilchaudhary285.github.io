@@ -216,11 +216,12 @@
     <section class="hero">
         <h1>Multiplayer Card Game</h1>
         <p class="meta">
-            Real-Time Multiplayer • Android • Socket.IO • Firebase-Enabled
+            Real-Time Multiplayer • Android • Photon PUN2 + Socket.IO • Firebase-Enabled
         </p>
 
         <span class="badge">Unity</span>
         <span class="badge">C#</span>
+        <span class="badge">Photon PUN2</span>
         <span class="badge">Socket.IO</span>
         <span class="badge">Node.js</span>
         <span class="badge">Firebase Auth</span>
@@ -235,8 +236,8 @@
         <h2>Project Overview</h2>
         <p>
             <strong>Multiplayer Card Game</strong> is a real-time online card game built for Android,
-            designed to support smooth multiplayer gameplay using a custom
-            <strong>Socket.IO client–server architecture</strong>.
+            using <strong>Photon PUN2</strong> for room, lobby, and matchmaking, paired with a custom
+            <strong>Socket.IO client–server layer</strong> for turn-based state synchronization.
         </p>
         <p>
             The project integrates <strong>Firebase Authentication</strong> for secure user login,
@@ -249,6 +250,7 @@
     <section>
         <h2>My Role & Responsibilities</h2>
         <ul>
+            <li>Built room creation, lobby, and matchmaking using Photon PUN2</li>
             <li>Designed and implemented real-time multiplayer architecture using Socket.IO</li>
             <li>Built client-side networking layer in Unity (C#)</li>
             <li>Integrated Node.js backend for room management and game state handling</li>
@@ -269,13 +271,15 @@
     <section>
         <h2>Engineering & System Design</h2>
 
-        <h3>Client–Server Multiplayer Architecture</h3>
-        <p>
-            The game uses a centralized server model where the backend acts as the single source
-            of truth for game state, ensuring consistency and fairness.
+       <h3>Client–Server Multiplayer Architecture</h3>
+       <p>
+            The game uses Photon PUN2 for room creation, lobby management, and matchmaking, while
+            a custom Node.js + Socket.IO backend acts as the single source of truth for turn-based
+            game state, ensuring consistency and fairness.
         </p>
         <ul>
-            <li>Server-managed rooms and player sessions</li>
+            <li>Photon PUN2 rooms and lobby for session setup</li>
+            <li>Server-managed game state and player sessions via Socket.IO</li>
             <li>Authoritative turn validation on the backend</li>
             <li>Event-driven communication using Socket.IO</li>
         </ul>
@@ -341,7 +345,7 @@
             <li>Improved player onboarding with frictionless social sign-in</li>
             <li>Increased engagement using push notifications and social invites</li>
             <li>Achieved secure, cheat-resistant multiplayer gameplay</li>
-            <li>Built a scalable multiplayer foundation combining Firebase and Socket.IO</li>
+            <li>Built a scalable multiplayer foundation combining Photon PUN2, Socket.IO, and Firebase</li>
         </ul>
     </section>
 
