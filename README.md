@@ -124,9 +124,9 @@ I strongly prioritize:
 # 🌟 Featured Projects
 
 ## 🏃 Alnahsha Run
-An endless runner game released on Android & iOS with **5M+ downloads**.
+### Endless Runner | Android & iOS | 5M+ Downloads
 
-### Contributions
+### 🔹 Contributions
 - Gameplay improvements
 - Production bug fixing
 - Localization-ready UI system
@@ -139,18 +139,20 @@ https://drive.google.com/file/d/1nCoM8EgQByPL0qwkNE9VH8T2wXpjZ-mY/view?usp=shari
 ---
 
 ## 🃏 Multiplayer Card Game
-A real-time multiplayer card game for Android.
+### Unity | Photon PUN2 | Socket.IO | Real-Time Multiplayer
 
-### Features
-- Room-based multiplayer
+### 🔹 Features
+- Room-based multiplayer gameplay
 - Firebase Authentication
 - Friend systems
 - Matchmaking
 - Leaderboards
 - WhatsApp social invites
 - Push notifications
+- Network-resilient synchronization
 
-### Tech Used
+### 🔹 Tech Used
+- Photon PUN2
 - Socket.IO
 - Firebase
 - Node.js
@@ -160,49 +162,77 @@ https://drive.google.com/file/d/1qN2d6zHONrlRwKGGro0xoBqKicwFMzhH/view?usp=shari
 
 ---
 
-## 🏃‍♂️ Deft Runner
-A 3D endless runner game developed for Android.
+## 🛡️ Multiplayer Arena Protocol
+### Unity 2022 LTS | Netcode for GameObjects | Windows | 2-Player Co-op
 
-### Contributions
-- Core gameplay systems
-- Origin shifting
-- Object pooling
-- Addressables integration
-- State-based gameplay flow
+### 🔹 Features
+- Server-authoritative 2-player co-op survival arena
+- Modular ability system (Dash, Projectile, Heal) via a shared BaseAbility class
+- Server-only enemy AI state machine (Patrol → Chase → Attack)
+- Slot-based session reconnection — health, score, and ability cooldowns restored on rejoin
+
+🎥 Demo Video:
+https://drive.google.com/file/d/1G69NQzM6XEuHGmR2MY8vK8lOAvrgYZQ4/view?usp=sharing
+
+---
+
+## 🔫 Multiplayer Tank Battle Game (In Progress)
+### Unity | Photon PUN2 → Photon Fusion 2.x (Migrating) | Android
+
+### 🔹 Features
+- Offline & Online Modes
+- Tilemap-based level design
+- Dynamic 1–4 player support
+- RaiseEvent synchronization
+- ScriptableObject-driven systems
+- Clean room-based multiplayer architecture
+- Currently migrating networking layer from Photon PUN2 to Photon Fusion 2.x
 
 🎥 Demo Video:  
-https://drive.google.com/file/d/1ZjhA80vc11i3IVcC1PCAXfBZackmJEiZ/view?usp=sharing
+https://drive.google.com/file/d/1p-b62e9rE4O7p42PqA77OJCi2lgRa590/view?usp=sharing
 
 ---
 
 ## 🏙️ City Builder – Resource Management Game
-A resource management & city builder game for WebGL & Android.
+### Unity | WebGL & Android
 
-### Features
-- Building systems
+### 🔹 Features
 - Resource systems
+- Building systems
 - Persistent progression
-- Node.js backend integration
 - WebGL optimization
+- Backend integration with Node.js & MongoDB
+- Modular scalable architecture
 
 🎥 Demo Video:  
 https://drive.google.com/file/d/1OiCZiFMJrmvgT7rq6hSBsdjcRFMpFrKg/view?usp=sharing
 
 ---
 
-## 🚓 Multiplayer Tank Battle Game (In Progress)
-A Battle City–style multiplayer tank game built using Unity.
+## 🏃‍♂️ Deft Runner
+### 3D Endless Runner | Android
 
-### Features
-- Offline & Online Modes
-- Photon PUN Multiplayer
-- Tilemap-based levels
-- Dynamic 1–4 player support
-- RaiseEvent synchronization
-- ScriptableObject-driven systems
+### 🔹 Contributions
+- Core gameplay systems
+- Origin shifting
+- Object pooling
+- Addressables integration
+- State-based gameplay architecture
 
 🎥 Demo Video:  
-https://drive.google.com/file/d/1p-b62e9rE4O7p42PqA77OJCi2lgRa590/view?usp=sharing
+https://drive.google.com/file/d/1ZjhA80vc11i3IVcC1PCAXfBZackmJEiZ/view?usp=sharing
+
+---
+
+## 🧍 3D Character Creator Tool
+### Windows | Character Customization System
+
+### 🔹 Features
+- Blendshape customization
+- Facial morphing
+- Hair & skin customization
+- Color gradients
+- Advanced export pipeline optimization
 
 ---
 
@@ -250,9 +280,6 @@ https://drive.google.com/file/d/1DuBpsr_5JBLUTJuovOrSIuQBQQidUlVe/view?usp=shari
 
 ## 📡 Network Data Optimization
 https://drive.google.com/file/d/1i2o3uwph4UPJG3K8IdRaNkPK0qha_oHZ/view?usp=sharing
-
-## 🎮 Arena Protocol – NGO Multiplayer Survival Arena 
-https://drive.google.com/file/d/1G69NQzM6XEuHGmR2MY8vK8lOAvrgYZQ4/view?usp=sharing
 
 ---
 
