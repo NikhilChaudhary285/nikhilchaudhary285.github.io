@@ -336,6 +336,8 @@ I am always open to discussions about:
 - Game Architecture
 - Performance Optimization
 - Mobile Game Development
+- Hyper-Casual & Casual Games
+- Backend & Networking Systems
 
 ---
 
