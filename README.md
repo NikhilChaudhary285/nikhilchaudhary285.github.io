@@ -322,7 +322,7 @@ Credly-verified validation of core Unity/C# fundamentals, completed alongside on
 
 # 📄 Resume
 
-https://drive.google.com/file/d/1RDB_1Oqla_3jlJ36U0iGiwnlD-y7QGsu/view?usp=sharing
+https://drive.google.com/file/d/13YTGlSPY6Bpncwq_DppsSq6C0_xtHowX/view?usp=sharing
 
 ---
 
